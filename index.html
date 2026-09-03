@@ -62,6 +62,7 @@ input,textarea,select{font-family:inherit}
 .section-title{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.2;margin-bottom:20px;letter-spacing:-.02em}
 .section-title span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;font-weight:400}
 .section-sub{color:var(--muted);max-width:700px;margin:0 auto 50px;font-size:1.05rem;line-height:1.8}
+.text-center{text-align:center}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 32px;border-radius:100px;font-weight:700;font-size:.95rem;transition:var(--transition);cursor:pointer;border:none;position:relative;overflow:hidden;white-space:nowrap}
 .btn::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.2);transform:translateX(-100%);transition:transform .4s}
 .btn:hover::before{transform:translateX(0)}
@@ -71,12 +72,8 @@ input,textarea,select{font-family:inherit}
 .btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
 .btn-whatsapp{background:#25d366;color:#fff}
 .btn-whatsapp:hover{background:#128c7e;transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,211,102,.3)}
-.btn-instagram{background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);color:#fff}
-.btn-instagram:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(220,39,67,.3)}
-.btn-tiktok{background:#000;color:#fff;border:1px solid var(--border2)}
-.btn-tiktok:hover{background:#111;border-color:var(--accent);transform:translateY(-2px)}
-.btn-sm{padding:10px 20px;font-size:.85rem}
 .btn-lg{padding:18px 40px;font-size:1.05rem}
+.btn-xl{padding:20px 50px;font-size:1.15rem}
 #loader{position:fixed;inset:0;background:#000;z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:30px;transition:opacity .5s}
 .loader-content{text-align:center}
 .loader-logo{width:100px;height:100px;margin:0 auto 20px;animation:logo-spin 3s linear infinite}
@@ -99,7 +96,6 @@ nav.scrolled{background:rgba(5,5,5,.98);backdrop-filter:blur(20px);-webkit-backd
 .nav-links a::after{content:"";position:absolute;bottom:0;right:0;width:0;height:2px;background:var(--grad);transition:width .3s}
 .nav-links a:hover{color:var(--fg)}
 .nav-links a:hover::after{width:100%}
-.nav-actions{display:flex;gap:10px;align-items:center;flex-shrink:0}
 .menu-toggle{width:45px;height:45px;border:2px solid var(--accent);border-radius:50%;align-items:center;justify-content:center;font-size:1.5rem;transition:var(--transition-fast);flex-shrink:0;background:transparent;color:var(--accent);cursor:pointer;display:flex}
 .menu-toggle:hover{background:var(--accent);color:#000;transform:scale(1.05)}
 .menu-toggle.active{background:var(--accent);color:#000}
@@ -179,27 +175,48 @@ nav.scrolled{background:rgba(5,5,5,.98);backdrop-filter:blur(20px);-webkit-backd
 .portfolio-name{font-size:1.3rem;font-weight:700;margin-bottom:10px}
 .portfolio-desc{color:var(--muted);font-size:.9rem;margin-bottom:15px}
 .portfolio-result{background:rgba(197,255,0,.15);color:var(--accent);padding:6px 12px;border-radius:8px;font-size:.85rem;font-weight:600;display:inline-flex;align-items:center;gap:6px;width:fit-content}
-.pricing{background:var(--bg)}
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1100px;margin:0 auto}
-.pricing-card{padding:35px 25px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-lg);position:relative;transition:var(--transition)}
-.pricing-card:hover{transform:translateY(-10px);box-shadow:var(--shadow)}
-.pricing-card.featured{background:linear-gradient(135deg,rgba(197,255,0,.05),rgba(0,229,255,.05));border-color:var(--accent);transform:scale(1.05)}
-.pricing-card.featured:hover{transform:scale(1.05) translateY(-10px)}
-.pricing-badge{position:absolute;top:-12px;right:30px;background:var(--grad);color:#000;padding:6px 16px;border-radius:100px;font-size:.75rem;font-weight:700;text-transform:uppercase}
-.pricing-name{font-size:1.2rem;font-weight:700;margin-bottom:10px}
-.pricing-desc{color:var(--muted);font-size:.9rem;margin-bottom:25px;min-height:40px}
-.pricing-price{margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid var(--border)}
-.pricing-amount{font-size:2.5rem;font-weight:800;font-family:'Tajawal',sans-serif;line-height:1}
-.pricing-amount span{font-size:1rem;color:var(--muted);font-weight:400}
-.pricing-currency{font-size:1.2rem;color:var(--muted);vertical-align:super}
-.pricing-features{list-style:none;margin-bottom:30px}
-.pricing-features li{padding:10px 0;color:var(--muted);font-size:.95rem;display:flex;align-items:center;gap:10px;border-bottom:1px dashed var(--border)}
-.pricing-features li:last-child{border-bottom:none}
-.pricing-features li i{color:var(--accent)}
-.pricing-features li.disabled{opacity:.4}
-.pricing-features li.disabled i{color:var(--muted2)}
-.pricing-card .btn{width:100%}
-.team{background:var(--bg2)}
+
+/* ====== PROJECT REQUEST FORM SECTION ====== */
+.request-section{background:var(--bg2);position:relative;overflow:hidden}
+.request-section::before{content:"";position:absolute;top:-200px;right:-200px;width:500px;height:500px;background:var(--accent);border-radius:50%;filter:blur(200px);opacity:.05}
+.request-section::after{content:"";position:absolute;bottom:-200px;left:-200px;width:500px;height:500px;background:var(--accent2);border-radius:50%;filter:blur(200px);opacity:.05}
+.request-wrapper{position:relative;z-index:2;max-width:800px;margin:0 auto}
+.request-form{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-lg);padding:40px 35px;box-shadow:var(--shadow-lg)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;color:var(--fg);font-weight:600;font-size:.95rem;margin-bottom:8px}
+.form-group label .required{color:var(--danger);margin-right:3px}
+.form-group input,
+.form-group textarea,
+.form-group select{width:100%;padding:14px 18px;background:var(--bg);border:1.5px solid var(--border2);border-radius:var(--radius-sm);color:var(--fg);font-size:.95rem;transition:var(--transition-fast);outline:none}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(197,255,0,.1)}
+.form-group input::placeholder,
+.form-group textarea::placeholder{color:var(--muted2)}
+.form-group textarea{min-height:140px;resize:vertical}
+.form-group select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%238a8a8a' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 15px center;cursor:pointer}
+.form-group select option{background:var(--bg3);color:var(--fg)}
+.form-checkboxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:10px}
+.form-checkbox{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg);border:1px solid var(--border2);border-radius:var(--radius-sm);cursor:pointer;transition:var(--transition-fast)}
+.form-checkbox:hover{border-color:var(--accent);background:rgba(197,255,0,.03)}
+.form-checkbox input[type="checkbox"]{display:none}
+.form-checkbox input[type="checkbox"]:checked + .checkmark{background:var(--accent);border-color:var(--accent)}
+.form-checkbox input[type="checkbox"]:checked + .checkmark::after{display:block}
+.form-checkbox input[type="checkbox"]:checked ~ .check-label{color:var(--accent)}
+.checkmark{width:20px;height:20px;border:2px solid var(--border2);border-radius:5px;position:relative;flex-shrink:0;transition:var(--transition-fast)}
+.checkmark::after{content:"✓";display:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#000;font-size:.7rem;font-weight:900}
+.check-label{font-size:.85rem;color:var(--muted);transition:var(--transition-fast)}
+.form-submit{text-align:center;margin-top:30px}
+.form-submit .btn{width:100%;max-width:400px}
+.form-note{text-align:center;margin-top:20px;color:var(--muted);font-size:.85rem;display:flex;align-items:center;justify-content:center;gap:8px}
+.form-note i{color:var(--accent)}
+.form-success{display:none;text-align:center;padding:40px;background:var(--bg3);border:1px solid var(--accent);border-radius:var(--radius-lg)}
+.form-success i{font-size:4rem;color:var(--success);margin-bottom:20px}
+.form-success h3{font-size:1.5rem;margin-bottom:10px}
+.form-success p{color:var(--muted);margin-bottom:20px}
+
+.team{background:var(--bg)}
 .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;max-width:900px;margin:0 auto}
 .team-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:var(--transition);text-align:center}
 .team-card:hover{transform:translateY(-8px);border-color:var(--accent)}
@@ -229,7 +246,7 @@ footer{padding:60px 0 30px;background:var(--bg2);border-top:1px solid var(--bord
 .footer-contact-item i{color:var(--accent);margin-top:5px;width:20px}
 .footer-bottom{padding-top:30px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;color:var(--muted);font-size:.85rem}
 
-/* Floating Buttons - Side by Side at Bottom */
+/* Floating Buttons */
 .floating-buttons{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:15px;z-index:999;align-items:center}
 .floating-btn{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.8rem;box-shadow:0 5px 25px rgba(0,0,0,.4);transition:var(--transition);animation:float 3s ease-in-out infinite}
 .floating-btn:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(0,0,0,.5)}
@@ -253,8 +270,6 @@ footer{padding:60px 0 30px;background:var(--bg2);border-top:1px solid var(--bord
   .nav-links{display:none}
   .about-grid{grid-template-columns:1fr;gap:30px}
   .footer-grid{grid-template-columns:1fr;gap:30px}
-  .pricing-card.featured{transform:none}
-  .pricing-card.featured:hover{transform:translateY(-10px)}
 }
 @media(max-width:768px){
   .section{padding:70px 0}
@@ -268,7 +283,6 @@ footer{padding:60px 0 30px;background:var(--bg2);border-top:1px solid var(--bord
   .about-icon-big{font-size:4rem}
   .services-grid{grid-template-columns:1fr}
   .portfolio-grid{grid-template-columns:1fr}
-  .pricing-grid{grid-template-columns:1fr}
   .team-grid{grid-template-columns:1fr;max-width:400px}
   .footer-grid{grid-template-columns:1fr;gap:25px}
   .footer-bottom{flex-direction:column;text-align:center}
@@ -276,6 +290,9 @@ footer{padding:60px 0 30px;background:var(--bg2);border-top:1px solid var(--bord
   .floating-btn{width:55px;height:55px;font-size:1.6rem}
   .back-to-top{bottom:80px;right:15px}
   .container{padding:0 15px}
+  .request-form{padding:25px 20px}
+  .form-row{grid-template-columns:1fr;gap:0}
+  .form-checkboxes{grid-template-columns:1fr 1fr}
 }
 @media(max-width:480px){
   .hero h1{font-size:1.6rem}
@@ -286,6 +303,8 @@ footer{padding:60px 0 30px;background:var(--bg2);border-top:1px solid var(--bord
   .section-title{font-size:1.5rem}
   .floating-btn{width:50px;height:50px;font-size:1.5rem}
   .floating-buttons{gap:10px;bottom:10px}
+  .form-checkboxes{grid-template-columns:1fr}
+  .request-form{padding:20px 15px}
 }
 </style>
 </head>
@@ -332,7 +351,7 @@ footer{padding:60px 0 30px;background:var(--bg2);border-top:1px solid var(--bord
       <a href="#about">من نحن</a>
       <a href="#services">الخدمات</a>
       <a href="#portfolio">أعمالنا</a>
-      <a href="#pricing">الأسعار</a>
+      <a href="#request">اطلب مشروعك</a>
     </div>
   </div>
 </nav>
@@ -343,7 +362,7 @@ footer{padding:60px 0 30px;background:var(--bg2);border-top:1px solid var(--bord
     <li><a href="#about" onclick="toggleMobileMenu()">من نحن</a></li>
     <li><a href="#services" onclick="toggleMobileMenu()">الخدمات</a></li>
     <li><a href="#portfolio" onclick="toggleMobileMenu()">أعمالنا</a></li>
-    <li><a href="#pricing" onclick="toggleMobileMenu()">الأسعار</a></li>
+    <li><a href="#request" onclick="toggleMobileMenu()">اطلب مشروعك</a></li>
   </ul>
 </div>
 
@@ -377,19 +396,19 @@ footer{padding:60px 0 30px;background:var(--bg2);border-top:1px solid var(--bord
       </div>
       <div class="hero-stats">
         <div class="stat-item">
-          <div class="stat-number" data-count="150">280</div>
+          <div class="stat-number" data-count="150">130</div>
           <div class="stat-label">مشروع منجز</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number" data-count="98">90</div>
+          <div class="stat-number" data-count="98">/99</div>
           <div class="stat-label">% رضا العملاء</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number" data-count="50">250</div>
+          <div class="stat-number" data-count="50">+125</div>
           <div class="stat-label">عميل نشط</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number" data-count="5">+4</div>
+          <div class="stat-number" data-count="5">+6</div>
           <div class="stat-label">سنوات خبرة</div>
         </div>
       </div>
@@ -527,135 +546,243 @@ footer{padding:60px 0 30px;background:var(--bg2);border-top:1px solid var(--bord
 <section class="section portfolio" id="portfolio">
   <div class="container">
     <div class="text-center reveal">
-      <div class="section-label" style="margin:0 auto 20px">أعمالنا</div>
-      <h2 class="section-title">نتائج حقيقية <span>نفتخر بها</span></h2>
-      <p class="section-sub">لا نقدم مجرد مواقع، نقدم حلولاً تزيد مبيعاتك وتحسن تجربة عملائك.</p>
+      <div class="section-label" style="margin:0 auto 20px">أمثلة على أعمالنا</div>
+      <h2 class="section-title">مواقع عالمية <span>نستلهم منها</span></h2>
+      <p class="section-sub">نصمم ونطور مواقع بمستوى عالمي. إليك أمثلة لأساليب وتصاميم ننفذها لعملائنا.</p>
     </div>
     <div class="portfolio-tabs reveal">
       <div class="portfolio-tab active" data-filter="all">الكل</div>
-      <div class="portfolio-tab" data-filter="web">مواقع</div>
-      <div class="portfolio-tab" data-filter="app">تطبيقات</div>
-      <div class="portfolio-tab" data-filter="ai">ذكاء اصطناعي</div>
-      <div class="portfolio-tab" data-filter="design">تصميم</div>
+      <div class="portfolio-tab" data-filter="ecommerce">متاجر</div>
+      <div class="portfolio-tab" data-filter="corporate">شركات</div>
+      <div class="portfolio-tab" data-filter="landing">صفحات هبوط</div>
+      <div class="portfolio-tab" data-filter="dashboard">لوحات تحكم</div>
     </div>
     <div class="portfolio-grid">
-      <div class="portfolio-item reveal" data-category="web">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="E-commerce" class="portfolio-img">
+      <div class="portfolio-item reveal" data-category="ecommerce">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="E-commerce Store" class="portfolio-img">
         <div class="portfolio-overlay">
           <div class="portfolio-cat">متجر إلكتروني</div>
-          <div class="portfolio-name">منصة تسوق متكاملة</div>
-          <div class="portfolio-desc">متجر إلكتروني متكامل مع نظام دفع وإدارة مخزون</div>
+          <div class="portfolio-name">متجر مثل أمازون</div>
+          <div class="portfolio-desc">متجر إلكتروني متكامل بنظام سلة شراء، دفع آمن، وإدارة مخزون</div>
           <div class="portfolio-result"><i class="fa-solid fa-chart-line"></i> +210% مبيعات</div>
         </div>
       </div>
-      <div class="portfolio-item reveal reveal-delay-1" data-category="app">
-        <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=800" alt="App" class="portfolio-img">
+      <div class="portfolio-item reveal reveal-delay-1" data-category="corporate">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Corporate Website" class="portfolio-img">
         <div class="portfolio-overlay">
-          <div class="portfolio-cat">تطبيق موبايل</div>
-          <div class="portfolio-name">تطبيق توصيل ذكي</div>
-          <div class="portfolio-desc">تطبيق iOS و Android للتوصيل مع تتبع مباشر</div>
-          <div class="portfolio-result"><i class="fa-solid fa-download"></i> 50,000+ تحميل</div>
+          <div class="portfolio-cat">موقع شركة</div>
+          <div class="portfolio-name">موقع شركات احترافي</div>
+          <div class="portfolio-desc">موقع شركة بتصميم عصري يعكس هوية العلامة التجارية بقوة</div>
+          <div class="portfolio-result"><i class="fa-solid fa-globe"></i> تصميم عالمي</div>
         </div>
       </div>
-      <div class="portfolio-item reveal reveal-delay-2" data-category="web">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="Dashboard" class="portfolio-img">
+      <div class="portfolio-item reveal reveal-delay-2" data-category="dashboard">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Dashboard" class="portfolio-img">
         <div class="portfolio-overlay">
           <div class="portfolio-cat">لوحة تحكم</div>
-          <div class="portfolio-name">نظام إدارة شركات</div>
-          <div class="portfolio-desc">لوحة تحكم تحليلية متقدمة للشركات</div>
+          <div class="portfolio-name">لوحة تحكم متقدمة</div>
+          <div class="portfolio-desc">لوحة تحكم تحليلية مثل Shopify Dashboard لإدارة أعمالك</div>
           <div class="portfolio-result"><i class="fa-solid fa-clock"></i> توفير 40 ساعة/أسبوع</div>
         </div>
       </div>
-      <div class="portfolio-item reveal" data-category="ai">
-        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" alt="AI Chatbot" class="portfolio-img">
+      <div class="portfolio-item reveal" data-category="landing">
+        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="Landing Page" class="portfolio-img">
         <div class="portfolio-overlay">
-          <div class="portfolio-cat">ذكاء اصطناعي</div>
-          <div class="portfolio-name">شات بوت ذكي</div>
-          <div class="portfolio-desc">نظام ذكاء اصطناعي متقدم للرد على استفسارات العملاء</div>
-          <div class="portfolio-result"><i class="fa-solid fa-percent"></i> توفير 85% من الوقت</div>
+          <div class="portfolio-cat">صفحة هبوط</div>
+          <div class="portfolio-name">صفحة هبوط عالية التحويل</div>
+          <div class="portfolio-desc">صفحة هبوط مثل Stripe مصممة لتحقيق أقصى معدل تحويل</div>
+          <div class="portfolio-result"><i class="fa-solid fa-percent"></i> 85% معدل تحويل</div>
         </div>
       </div>
-      <div class="portfolio-item reveal reveal-delay-1" data-category="design">
-        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800" alt="UI Design" class="portfolio-img">
+      <div class="portfolio-item reveal reveal-delay-1" data-category="ecommerce">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1e704d3?w=800&q=80" alt="Fashion Store" class="portfolio-img">
         <div class="portfolio-overlay">
-          <div class="portfolio-cat">تصميم UI/UX</div>
-          <div class="portfolio-name">هوية بصرية متكاملة</div>
-          <div class="portfolio-desc">تصميم شعار وهوية بصرية كاملة</div>
-          <div class="portfolio-result"><i class="fa-solid fa-palette"></i> +150% تفاعل</div>
+          <div class="portfolio-cat">متجر أزياء</div>
+          <div class="portfolio-name">متجر مثل Zara / H&M</div>
+          <div class="portfolio-desc">متجر أزياء إلكتروني بتصميم أنيق وتجربة تسوق سلسة</div>
+          <div class="portfolio-result"><i class="fa-solid fa-bag-shopping"></i> +180% مبيعات</div>
         </div>
       </div>
-      <div class="portfolio-item reveal reveal-delay-2" data-category="design">
-        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800" alt="Brand Design" class="portfolio-img">
+      <div class="portfolio-item reveal reveal-delay-2" data-category="corporate">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80" alt="Tech Company" class="portfolio-img">
         <div class="portfolio-overlay">
-          <div class="portfolio-cat">تصميم</div>
-          <div class="portfolio-name">تصميم واجهة تطبيق</div>
-          <div class="portfolio-desc">تصميم تجربة مستخدم احترافية</div>
-          <div class="portfolio-result"><i class="fa-solid fa-star"></i> تقييم 4.9/5</div>
+          <div class="portfolio-cat">شركة تقنية</div>
+          <div class="portfolio-name">موقع مثل Apple / Tesla</div>
+          <div class="portfolio-desc">موقع شركة تقنية بتصميم أنيق مع حركات وانتقالات سلسة</div>
+          <div class="portfolio-result"><i class="fa-solid fa-award"></i> تصميم حائز على جوائز</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section pricing" id="pricing">
+<section class="section request-section" id="request">
   <div class="container">
     <div class="text-center reveal">
-      <div class="section-label" style="margin:0 auto 20px">الأسعار</div>
-      <h2 class="section-title">باقات <span>مناسبة للجميع</span></h2>
-      <p class="section-sub">اختر الباقة التي تناسب احتياجاتك وميزانيتك.</p>
+      <div class="section-label" style="margin:0 auto 20px">اطلب مشروعك</div>
+      <h2 class="section-title">أخبرنا عن <span>مشروعك</span></h2>
+      <p class="section-sub">املأ النموذج التالي بتفاصيل مشروعك وسنتواصل معك فوراً عبر واتساب لمناقشة التفاصيل وتقديم عرض مخصص.</p>
     </div>
-    <div class="pricing-grid">
-      <div class="pricing-card reveal">
-        <div class="pricing-name">الباقة الأساسية</div>
-        <div class="pricing-desc">مثالية للمشاريع الصغيرة والبدايات</div>
-        <div class="pricing-price">
-          <span class="pricing-currency">$</span>
-          <span class="pricing-amount">99<span>/مشروع</span></span>
+    <div class="request-wrapper reveal">
+      <form class="request-form" id="requestForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label><span class="required">*</span> الاسم الكامل</label>
+            <input type="text" id="fullName" placeholder="أدخل اسمك الكامل" required>
+          </div>
+          <div class="form-group">
+            <label>رقم الهاتف (اختياري)</label>
+            <input type="tel" id="phone" placeholder="مثال: 0555123456">
+          </div>
         </div>
-        <ul class="pricing-features">
-          <li><i class="fa-solid fa-check"></i> موقع من 5 صفحات</li>
-          <li><i class="fa-solid fa-check"></i> تصميم متجاوب</li>
-          <li><i class="fa-solid fa-check"></i> نموذج تواصل</li>
-          <li><i class="fa-solid fa-check"></i> شهادة SSL مجانية</li>
-          <li><i class="fa-solid fa-check"></i> دعم شهر واحد</li>
-        </ul>
-        <a href="https://wa.me/213671746345" class="btn btn-outline" target="_blank">اطلب الآن</a>
-      </div>
-      <div class="pricing-card featured reveal reveal-delay-1">
-        <div class="pricing-badge">الأكثر طلباً</div>
-        <div class="pricing-name">الباقة الاحترافية</div>
-        <div class="pricing-desc">مثالية للشركات والمتاجر المتوسطة</div>
-        <div class="pricing-price">
-          <span class="pricing-currency">$</span>
-          <span class="pricing-amount">299<span>/مشروع</span></span>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label><span class="required">*</span> اسم المشروع / الموقع</label>
+            <input type="text" id="projectName" placeholder="مثال: متجر أزياء أونلاين" required>
+          </div>
+          <div class="form-group">
+            <label><span class="required">*</span> نوع المشروع</label>
+            <select id="projectType" required>
+              <option value="">-- اختر نوع المشروع --</option>
+              <option value="موقع شركة">موقع شركة / مؤسسة</option>
+              <option value="متجر إلكتروني">متجر إلكتروني</option>
+              <option value="صفحة هبوط">صفحة هبوط (Landing Page)</option>
+              <option value="مدونة">مدونة / موقع محتوى</option>
+              <option value="تطبيق موبايل">تطبيق موبايل</option>
+              <option value="لوحة تحكم">لوحة تحكم / نظام إدارة</option>
+              <option value="موقع حجز">موقع حجز مواعيد</option>
+              <option value="موقع تعليمي">موقع تعليمي / كورسات</option>
+              <option value="حل ذكاء اصطناعي">حل ذكاء اصطناعي</option>
+              <option value="أخرى">أخرى</option>
+            </select>
+          </div>
         </div>
-        <ul class="pricing-features">
-          <li><i class="fa-solid fa-check"></i> موقع حتى 15 صفحة</li>
-          <li><i class="fa-solid fa-check"></i> تصميم مخصص بالكامل</li>
-          <li><i class="fa-solid fa-check"></i> لوحة تحكم كاملة</li>
-          <li><i class="fa-solid fa-check"></i> متجر إلكتروني أساسي</li>
-          <li><i class="fa-solid fa-check"></i> SEO متقدم</li>
-          <li><i class="fa-solid fa-check"></i> دعم 3 أشهر</li>
-        </ul>
-        <a href="https://wa.me/213671746345" class="btn btn-primary" target="_blank">اطلب الآن</a>
-      </div>
-      <div class="pricing-card reveal reveal-delay-2">
-        <div class="pricing-name">الباقة المتقدمة</div>
-        <div class="pricing-desc">مثالية للمشاريع الكبيرة والمعقدة</div>
-        <div class="pricing-price">
-          <span class="pricing-currency">$</span>
-          <span class="pricing-amount">699<span>/مشروع</span></span>
+
+        <div class="form-group">
+          <label><span class="required">*</span> وصف المشروع بالتفصيل</label>
+          <textarea id="projectDesc" placeholder="اشرح فكرة مشروعك بالتفصيل: ما هو الهدف من الموقع؟ من هو الجمهور المستهدف؟ ما هي الصفحات المطلوبة؟" required></textarea>
         </div>
-        <ul class="pricing-features">
-          <li><i class="fa-solid fa-check"></i> صفحات غير محدودة</li>
-          <li><i class="fa-solid fa-check"></i> تصميم UI/UX مخصص</li>
-          <li><i class="fa-solid fa-check"></i> تطبيق موبايل</li>
-          <li><i class="fa-solid fa-check"></i> ذكاء اصطناعي</li>
-          <li><i class="fa-solid fa-check"></i> API مخصص</li>
-          <li><i class="fa-solid fa-check"></i> دعم سنة كاملة</li>
-        </ul>
-        <a href="https://wa.me/213671746345" class="btn btn-outline" target="_blank">اطلب الآن</a>
-      </div>
+
+        <div class="form-group">
+          <label>المميزات والوظائف المطلوبة</label>
+          <div class="form-checkboxes">
+            <label class="form-checkbox">
+              <input type="checkbox" value="نظام تسجيل دخول">
+              <span class="checkmark"></span>
+              <span class="check-label">نظام تسجيل دخول</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox" value="سلة مشتريات">
+              <span class="checkmark"></span>
+              <span class="check-label">سلة مشتريات</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox" value="بوابات دفع">
+              <span class="checkmark"></span>
+              <span class="check-label">بوابات دفع</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox" value="لوحة تحكم">
+              <span class="checkmark"></span>
+              <span class="check-label">لوحة تحكم</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox" value="شات بوت / شات مباشر">
+              <span class="checkmark"></span>
+              <span class="check-label">شات بوت / شات مباشر</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox" value="إشعارات">
+              <span class="checkmark"></span>
+              <span class="check-label">إشعارات</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox" value="بحث متقدم">
+              <span class="checkmark"></span>
+              <span class="check-label">بحث متقدم</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox" value="خرائط Google">
+              <span class="checkmark"></span>
+              <span class="check-label">خرائط Google</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox" value="معرض صور / فيديو">
+              <span class="checkmark"></span>
+              <span class="check-label">معرض صور / فيديو</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox" value="نظام تقييمات">
+              <span class="checkmark"></span>
+              <span class="check-label">نظام تقييمات</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox" value="دعم متعدد اللغات">
+              <span class="checkmark"></span>
+              <span class="check-label">دعم متعدد اللغات</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox" value="SEO متقدم">
+              <span class="checkmark"></span>
+              <span class="check-label">SEO متقدم</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>مميزات إضافية أو خاصة</label>
+          <textarea id="extraFeatures" placeholder="اذكر أي مميزات خاصة تريدها في مشروعك (مثال: ربط مع API خارجية، نظام اشتراكات، برنامج ولاء، إلخ...)"></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>الميزانية المتوقعة</label>
+            <select id="budget">
+              <option value="">-- اختر نطاق الميزانية --</option>
+              <option value="أقل من 200$">أقل من 200$</option>
+              <option value="200$ - 500$">200$ - 500$</option>
+              <option value="500$ - 1000$">500$ - 1000$</option>
+              <option value="1000$ - 3000$">1000$ - 3000$</option>
+              <option value="أكثر من 3000$">أكثر من 3000$</option>
+              <option value="لم أحدد بعد">لم أحدد بعد</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>المدة الزمنية المطلوبة</label>
+            <select id="timeline">
+              <option value="">-- اختر المدة --</option>
+              <option value="أسبوع أو أقل">أسبوع أو أقل</option>
+              <option value="2-3 أسابيع">2-3 أسابيع</option>
+              <option value="شهر">شهر واحد</option>
+              <option value="1-2 شهر">1-2 شهر</option>
+              <option value="أكثر من شهرين">أكثر من شهرين</option>
+              <option value="مرن">مرن - لا استعجال</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>أمثلة على مواقع تعجبك (اختياري)</label>
+          <input type="text" id="examples" placeholder="مثال: apple.com, amazon.com, أو روابط لمواقع تعجبك">
+        </div>
+
+        <div class="form-group">
+          <label>ملاحظات إضافية</label>
+          <textarea id="notes" placeholder="أي ملاحظات أو تفاصيل إضافية تود إضافتها..." style="min-height:100px"></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary btn-xl" id="submitBtn">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>إرسال الطلب عبر واتساب</span>
+          </button>
+        </div>
+        <div class="form-note">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>بياناتك آمنة ولن تُستخدم إلا للتواصل معك بخصوص مشروعك</span>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -736,12 +863,12 @@ footer{padding:60px 0 30px;background:var(--bg2);border-top:1px solid var(--bord
     </div>
     <div class="footer-bottom">
       <div>© 2026 WebScript.com — جميع الحقوق محفوظة</div>
-      <div>صُنع بـ <i class="fa-solid fa-heart" style="color:var(--accent)"></i> في الجزائر 🇿</div>
+      <div>صُنع بـ <i class="fa-solid fa-heart" style="color:var(--accent)"></i> في الجزائر 🇩🇿</div>
     </div>
   </div>
 </footer>
 
-<!-- Floating Buttons - Side by Side -->
+<!-- Floating Buttons -->
 <div class="floating-buttons">
   <a href="https://wa.me/213671746345?text=مرحباً، أريد استشارة مجانية" class="floating-btn whatsapp" target="_blank" title="واتساب">
     <i class="fa-brands fa-whatsapp"></i>
@@ -904,6 +1031,78 @@ document.querySelectorAll('.portfolio-tab').forEach(tab=>{
       }
     });
   });
+});
+
+// Form submission via WhatsApp
+document.getElementById('requestForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  
+  const fullName=document.getElementById('fullName').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const projectName=document.getElementById('projectName').value.trim();
+  const projectType=document.getElementById('projectType').value;
+  const projectDesc=document.getElementById('projectDesc').value.trim();
+  const extraFeatures=document.getElementById('extraFeatures').value.trim();
+  const budget=document.getElementById('budget').value;
+  const timeline=document.getElementById('timeline').value;
+  const examples=document.getElementById('examples').value.trim();
+  const notes=document.getElementById('notes').value.trim();
+  
+  // Get checked features
+  const checkedFeatures=[];
+  document.querySelectorAll('.form-checkboxes input[type="checkbox"]:checked').forEach(cb=>{
+    checkedFeatures.push(cb.value);
+  });
+  
+  // Validation
+  if(!fullName||!projectName||!projectType||!projectDesc){
+    alert('يرجى ملء جميع الحقول المطلوبة (المميزة بـ *)');
+    return;
+  }
+  
+  // Build WhatsApp message
+  let message='🚀 *طلب مشروع جديد*\n';
+  message+='━━━━━━━━━━━━━━━━━━\n\n';
+  message+='👤 *الاسم:* '+fullName+'\n';
+  if(phone)message+='📱 *الهاتف:* '+phone+'\n';
+  message+='\n';
+  message+='📌 *اسم المشروع:* '+projectName+'\n';
+  message+='📂 *نوع المشروع:* '+projectType+'\n';
+  message+='\n';
+  message+='📝 *وصف المشروع:*\n'+projectDesc+'\n\n';
+  
+  if(checkedFeatures.length>0){
+    message+='⚙️ *المميزات المطلوبة:*\n';
+    checkedFeatures.forEach(f=>{message+='  ✅ '+f+'\n'});
+    message+='\n';
+  }
+  
+  if(extraFeatures){
+    message+='✨ *مميزات إضافية:*\n'+extraFeatures+'\n\n';
+  }
+  
+  if(budget)message+='💰 *الميزانية:* '+budget+'\n';
+  if(timeline)message+='⏰ *المدة المطلوبة:* '+timeline+'\n';
+  if(examples)message+='🔗 *أمثلة تعجبني:* '+examples+'\n';
+  if(notes)message+='\n📎 *ملاحظات:*\n'+notes+'\n';
+  
+  message+='\n━━━━━━━━━━━━━━━━━━\n';
+  message+='📨 مرسل من موقع WebScript.com';
+  
+  // Encode and open WhatsApp
+  const encodedMessage=encodeURIComponent(message);
+  const whatsappURL='https://wa.me/213671746345?text='+encodedMessage;
+  window.open(whatsappURL,'_blank');
+  
+  // Show success feedback
+  const btn=document.getElementById('submitBtn');
+  btn.innerHTML='<i class="fa-solid fa-check"></i> <span>تم فتح واتساب بنجاح!</span>';
+  btn.style.background='var(--success)';
+  
+  setTimeout(()=>{
+    btn.innerHTML='<i class="fa-brands fa-whatsapp"></i> <span>إرسال الطلب عبر واتساب</span>';
+    btn.style.background='';
+  },3000);
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
