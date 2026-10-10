@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="theme-color" content="#05060a" />
-<meta name="description" content="SALAHDIGITAL — We build high-performance websites, digital experiences and smart solutions designed to turn visitors into customers." />
-<meta name="keywords" content="web design, web development, digital agency, landing pages, e-commerce, business websites, SEO, UI/UX, SALAHDIGITAL" />
-<meta name="author" content="SALAHDIGITAL" />
-<meta property="og:title" content="SALAHDIGITAL — Digital Experiences That Convert" />
-<meta property="og:description" content="We create high-performance websites, digital experiences and smart solutions designed to turn visitors into customers." />
+<meta name="description" content="web_script — نبني تجارب رقمية احترافية، متاجر إلكترونية، وأنظمة تسيير مخصصة تحول زوارك إلى عملاء." />
+<meta name="keywords" content="تصميم مواقع, تطوير ويب, متجر إلكتروني, أنظمة تسيير, صفحات هبوط, web_script, الجزائر" />
+<meta name="author" content="web_script" />
+<meta property="og:title" content="web_script — حلول رقمية احترافية" />
+<meta property="og:description" content="متاجر إلكترونية، صفحات هبوط، وأنظمة تسيير مخصصة (مخازن، ورشات، شركات) بأعلى معايير الجودة." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200" />
-<title>SALAHDIGITAL — Digital Experiences That Convert</title>
+<meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200" />
+<title>web_script — حلول رقمية احترافية</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0d12'/%3E%3Cpath d='M8 16h6l2-4 4 8 2-4h6' stroke='%23a78bfa' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 /* =========================================================
-   SALAHDIGITAL — Premium Landing Page
-   Clean, organized, commented, responsive, accessible.
+   web_script — Premium Landing Page (Arabic RTL)
    ========================================================= */
 
 :root{
-  --primary:#a78bfa;        /* violet */
+  --primary:#a78bfa;
   --primary-2:#7c3aed;
-  --secondary:#22d3ee;      /* cyan */
-  --accent:#f472b6;         /* pink */
+  --secondary:#22d3ee;
+  --accent:#f472b6;
   --background:#05060a;
   --surface:#0b0d12;
   --surface-2:#10131a;
@@ -45,18 +44,19 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  font-family:'Tajawal','Space Grotesk',system-ui,-apple-system,sans-serif;
   background:var(--background);
   color:var(--text);
-  line-height:1.6;
+  line-height:1.7;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+  text-align: right;
 }
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
-h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.02em;line-height:1.1;font-weight:700}
+h1,h2,h3,h4{font-family:'Space Grotesk','Tajawal',sans-serif;letter-spacing:-.02em;line-height:1.2;font-weight:700}
 ::selection{background:rgba(167,139,250,.35);color:#fff}
 
 /* ---------- Animated background ---------- */
@@ -73,7 +73,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.02em
 }
 @keyframes bgShift{
   0%{transform:translate3d(0,0,0) scale(1)}
-  100%{transform:translate3d(-2%,2%,0) scale(1.08)}
+  100%{transform:translate3d(2%,2%,0) scale(1.08)}
 }
 .grid-overlay{
   position:fixed;inset:0;z-index:-1;pointer-events:none;
@@ -104,7 +104,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.02em
 
 /* ---------- Scroll progress ---------- */
 .scroll-progress{
-  position:fixed;top:0;left:0;height:2px;width:0%;z-index:1000;
+  position:fixed;top:0;right:0;height:2px;width:0%;z-index:1000;
   background:linear-gradient(90deg,var(--primary),var(--secondary),var(--accent));
   box-shadow:0 0 10px rgba(167,139,250,.6);
   transition:width .08s linear;
@@ -112,7 +112,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.02em
 
 /* ---------- Navbar ---------- */
 .nav{
-  position:fixed;top:16px;left:50%;transform:translateX(-50%);
+  position:fixed;top:16px;right:50%;transform:translateX(50%);
   width:min(1200px,calc(100% - 24px));
   z-index:100;
   display:flex;align-items:center;justify-content:space-between;
@@ -131,14 +131,19 @@ h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.02em
   padding:10px 22px;
 }
 .logo{
-  display:flex;align-items:center;gap:10px;
-  font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.02em;font-size:17px;
+  display:flex;align-items:center;gap:12px;
+  font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.02em;font-size:18px;
 }
-.logo-mark{
-  width:30px;height:30px;border-radius:9px;
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
-  display:grid;place-items:center;color:#0b0d12;font-weight:800;font-size:14px;
-  box-shadow:0 6px 20px rgba(167,139,250,.4);
+.logo-img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s var(--ease);
+  box-shadow: 0 4px 15px rgba(167,139,250,.2);
+}
+.logo:hover .logo-img {
+  transform: scale(1.05);
 }
 .nav-links{display:flex;gap:6px;align-items:center}
 .nav-links a{
@@ -153,12 +158,12 @@ h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.02em
   box-shadow:0 6px 20px rgba(124,58,237,.35);
 }
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(124,58,237,.5)}
-.nav-cta .arrow{display:inline-block;margin-left:6px;transition:transform .3s var(--ease)}
-.nav-cta:hover .arrow{transform:translateX(3px)}
+.nav-cta .arrow{display:inline-block;margin-right:6px;transition:transform .3s var(--ease)}
+.nav-cta:hover .arrow{transform:translateX(-3px)}
 
 .menu-btn{display:none;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.05);place-items:center}
 .menu-btn span{display:block;width:18px;height:2px;background:var(--text);position:relative;transition:all .3s var(--ease)}
-.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--text);transition:all .3s var(--ease)}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;right:0;width:18px;height:2px;background:var(--text);transition:all .3s var(--ease)}
 .menu-btn span::before{top:-6px}
 .menu-btn span::after{top:6px}
 .menu-btn.open span{background:transparent}
@@ -166,11 +171,11 @@ h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.02em
 .menu-btn.open span::after{top:0;transform:rotate(-45deg)}
 
 .mobile-menu{
-  position:fixed;top:0;right:0;width:min(340px,100%);height:100vh;
+  position:fixed;top:0;left:0;width:min(340px,100%);height:100vh;
   background:rgba(10,12,18,.95);backdrop-filter:blur(24px);
-  border-left:1px solid var(--border);
+  border-right:1px solid var(--border);
   padding:90px 30px 30px;z-index:99;
-  transform:translateX(100%);transition:transform .5s var(--ease-out);
+  transform:translateX(-100%);transition:transform .5s var(--ease-out);
   display:flex;flex-direction:column;gap:8px;
 }
 .mobile-menu.open{transform:translateX(0)}
@@ -225,7 +230,7 @@ section{padding:120px 0;position:relative}
 
 .hero h1{
   font-size:clamp(40px,6.5vw,84px);
-  line-height:1.02;letter-spacing:-.03em;
+  line-height:1.05;letter-spacing:-.03em;
   margin-bottom:24px;
   animation:fadeUp 1s var(--ease-out) .1s both;
 }
@@ -264,7 +269,7 @@ section{padding:120px 0;position:relative}
 }
 .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:var(--primary);transform:translateY(-3px)}
 .btn .arrow{transition:transform .3s var(--ease)}
-.btn:hover .arrow{transform:translateX(4px)}
+.btn:hover .arrow{transform:translateX(-4px)}
 
 /* Ripple */
 .ripple{position:absolute;border-radius:50%;transform:scale(0);background:rgba(255,255,255,.35);animation:rippleAnim .7s ease-out;pointer-events:none}
@@ -304,7 +309,7 @@ section{padding:120px 0;position:relative}
 .browser-bar .dots span:nth-child(2){background:#febc2e}
 .browser-bar .dots span:nth-child(3){background:#28c840}
 .browser-bar .url{
-  flex:1;margin-left:10px;padding:5px 12px;border-radius:6px;
+  flex:1;margin-right:10px;padding:5px 12px;border-radius:6px;
   background:rgba(255,255,255,.04);font-size:11px;color:var(--muted);
   font-family:monospace;
 }
@@ -345,9 +350,9 @@ section{padding:120px 0;position:relative}
 .floating-card .t{font-weight:600}
 .floating-card .s{font-size:11px;color:var(--muted)}
 
-.fc-1{top:8%;left:-4%;animation-delay:-1s}
-.fc-2{bottom:10%;right:-6%;animation-delay:-3s}
-.fc-3{top:55%;left:-8%;animation-delay:-5s}
+.fc-1{top:8%;right:-4%;animation-delay:-1s}
+.fc-2{bottom:10%;left:-6%;animation-delay:-3s}
+.fc-3{top:55%;right:-8%;animation-delay:-5s}
 @media(max-width:768px){.fc-3{display:none}.floating-card{padding:10px 14px;font-size:12px}.floating-card .ic{width:30px;height:30px}}
 @media(max-width:480px){.fc-1,.fc-2{transform:scale(.85)}}
 
@@ -385,9 +390,17 @@ section{padding:120px 0;position:relative}
   border:1px solid rgba(167,139,250,.25);margin-bottom:22px;
   color:var(--primary);transition:all .4s var(--ease);
 }
-.service:hover .ic{transform:scale(1.08) rotate(-4deg);box-shadow:0 0 30px rgba(167,139,250,.3)}
+.service:hover .ic{transform:scale(1.08) rotate(4deg);box-shadow:0 0 30px rgba(167,139,250,.3)}
 .service h3{font-size:22px;margin-bottom:10px}
-.service p{color:var(--muted);font-size:15px;margin-bottom:22px}
+.service p{color:var(--muted);font-size:15px;margin-bottom:16px}
+.price-tag {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 16px;
+  display: block;
+}
 .service .more{display:inline-flex;align-items:center;gap:8px;color:var(--primary);font-weight:600;font-size:14px;transition:gap .3s var(--ease);cursor:pointer}
 .service:hover .more{gap:14px}
 
@@ -401,7 +414,7 @@ section{padding:120px 0;position:relative}
 }
 .feature:hover{border-color:var(--border-strong);transform:translateY(-4px)}
 .feature .emoji{font-size:30px;margin-bottom:14px;display:inline-block;transition:transform .4s var(--ease)}
-.feature:hover .emoji{transform:scale(1.15) rotate(-6deg)}
+.feature:hover .emoji{transform:scale(1.15) rotate(6deg)}
 .feature h3{font-size:20px;margin-bottom:8px}
 .feature p{color:var(--muted);font-size:14px}
 .feature.big{grid-column:span 4;grid-row:span 2;background:linear-gradient(135deg,rgba(167,139,250,.1),rgba(34,211,238,.05));display:flex;flex-direction:column;justify-content:space-between}
@@ -454,61 +467,6 @@ section{padding:120px 0;position:relative}
 .project-link{display:inline-flex;align-items:center;gap:8px;color:var(--text);font-weight:600;font-size:14px;transition:gap .3s var(--ease);cursor:pointer}
 .project:hover .project-link{gap:14px;color:var(--primary)}
 
-/* ---------- Dashboard demo ---------- */
-.demo-wrap{
-  position:relative;border-radius:var(--radius-lg);overflow:hidden;
-  background:linear-gradient(180deg,rgba(20,22,30,.9),rgba(10,12,18,.95));
-  border:1px solid var(--border-strong);
-  box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 0 1px rgba(167,139,250,.1);
-}
-.demo-top{display:flex;align-items:center;gap:10px;padding:14px 18px;background:rgba(255,255,255,.03);border-bottom:1px solid var(--border)}
-.demo-top .dots{display:flex;gap:6px}
-.demo-top .dots span{width:11px;height:11px;border-radius:50%}
-.demo-top .dots span:nth-child(1){background:#ff5f57}
-.demo-top .dots span:nth-child(2){background:#febc2e}
-.demo-top .dots span:nth-child(3){background:#28c840}
-.demo-top .url{flex:1;text-align:center;font-size:12px;color:var(--muted);font-family:monospace}
-.demo-body{display:grid;grid-template-columns:220px 1fr;min-height:480px}
-.demo-side{padding:22px 18px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:6px}
-.demo-side .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:8px}
-.demo-side .brand .logo-mark{width:26px;height:26px;font-size:12px;border-radius:7px}
-.demo-side .nav-item{padding:10px 12px;border-radius:10px;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:10px;transition:all .3s var(--ease);cursor:pointer}
-.demo-side .nav-item:hover{background:rgba(255,255,255,.04);color:var(--text)}
-.demo-side .nav-item.active{background:linear-gradient(135deg,rgba(167,139,250,.15),rgba(34,211,238,.08));color:var(--text);border:1px solid rgba(167,139,250,.25)}
-.demo-side .nav-item .ic{width:16px;height:16px}
-.demo-main{padding:22px;display:flex;flex-direction:column;gap:18px;overflow:hidden}
-.demo-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.demo-header h3{font-size:22px}
-.demo-header .btn{padding:8px 14px;font-size:13px}
-.demo-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.demo-stat{padding:16px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid var(--border)}
-.demo-stat .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
-.demo-stat .val{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;margin-top:6px}
-.demo-stat .chg{font-size:11px;margin-top:4px;color:#34d399}
-.demo-stat .chg.down{color:#f87171}
-.demo-chart{padding:18px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid var(--border);flex:1;min-height:180px;position:relative}
-.demo-chart h4{font-size:14px;margin-bottom:14px;color:var(--muted);font-weight:500}
-.demo-chart svg{width:100%;height:140px}
-.demo-chart .line{stroke:url(#lineGrad);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:800;stroke-dashoffset:800;animation:drawLine 2s var(--ease-out) forwards}
-@keyframes drawLine{to{stroke-dashoffset:0}}
-.demo-chart .area{fill:url(#areaGrad);opacity:.3}
-.demo-bottom{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.demo-activity,.demo-notif{padding:16px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid var(--border)}
-.demo-activity h4,.demo-notif h4{font-size:13px;color:var(--muted);margin-bottom:12px;font-weight:500}
-.demo-item{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:13px;border-bottom:1px solid var(--border)}
-.demo-item:last-child{border-bottom:none}
-.demo-item .dot{width:8px;height:8px;border-radius:50%;background:var(--primary);box-shadow:0 0 8px var(--primary);flex-shrink:0}
-.demo-item .dot.green{background:#34d399;box-shadow:0 0 8px #34d399}
-.demo-item .dot.cyan{background:var(--secondary);box-shadow:0 0 8px var(--secondary)}
-.demo-item .time{margin-left:auto;font-size:11px;color:var(--muted)}
-
-@media(max-width:900px){
-  .demo-body{grid-template-columns:1fr}
-  .demo-side{display:none}
-  .demo-stats{grid-template-columns:repeat(2,1fr)}
-  .demo-bottom{grid-template-columns:1fr}
-}
-
 /* ---------- Testimonials ---------- */
 .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media(max-width:900px){.testimonials-grid{grid-template-columns:1fr}}
@@ -556,7 +514,7 @@ section{padding:120px 0;position:relative}
   border:1px solid var(--border);display:flex;align-items:center;gap:16px;
   transition:all .4s var(--ease);text-decoration:none;color:inherit;
 }
-.contact-card:hover{transform:translateX(6px);border-color:var(--border-strong)}
+.contact-card:hover{transform:translateX(-6px);border-color:var(--border-strong)}
 .contact-card .ic{
   width:48px;height:48px;border-radius:12px;display:grid;place-items:center;
   background:linear-gradient(135deg,rgba(167,139,250,.15),rgba(34,211,238,.1));
@@ -622,7 +580,7 @@ footer{padding:80px 0 30px;border-top:1px solid var(--border);margin-top:80px}
 
 /* ---------- Back to top ---------- */
 .to-top{
-  position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;
+  position:fixed;bottom:30px;left:30px;width:48px;height:48px;border-radius:50%;
   background:linear-gradient(135deg,var(--primary),var(--primary-2));
   color:#fff;display:grid;place-items:center;z-index:90;
   opacity:0;pointer-events:none;transform:translateY(20px);
@@ -691,7 +649,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 }
 .modal-overlay.active .modal-content{transform:translateY(0) scale(1)}
 .modal-close{
-  position:absolute;top:20px;right:20px;width:44px;height:44px;
+  position:absolute;top:20px;left:20px;width:44px;height:44px;
   border-radius:50%;background:rgba(255,255,255,.05);
   border:1px solid var(--border);display:grid;place-items:center;
   cursor:pointer;transition:all .3s var(--ease);z-index:10;
@@ -750,25 +708,24 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <!-- Loader -->
 <div class="loader" id="loader" aria-hidden="true">
   <div class="loader-inner">
-    <div class="loader-mark">S</div>
+    <div class="loader-mark">W</div>
     <div class="loader-bar"></div>
   </div>
 </div>
 
 <!-- Navbar -->
 <nav class="nav" id="nav" aria-label="Main navigation">
-  <a href="#home" class="logo" aria-label="SALAHDIGITAL home">
-    <span class="logo-mark">S</span>
-    <span>SALAHDIGITAL</span>
+  <a href="#home" class="logo" aria-label="web_script home">
+    <img src="logo.jpg" alt="web_script Logo" class="logo-img" />
   </a>
   <div class="nav-links" role="menubar">
-    <a href="#home" class="active">Home</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#home" class="active">الرئيسية</a>
+    <a href="#services">خدماتنا</a>
+    <a href="#projects">أعمالنا</a>
+    <a href="#about">من نحن</a>
+    <a href="#contact">تواصل معنا</a>
   </div>
-  <a href="#contact" class="nav-cta">Start a Project <span class="arrow">→</span></a>
+  <a href="#contact" class="nav-cta">ابدأ مشروعك <span class="arrow">←</span></a>
   <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
     <span></span>
   </button>
@@ -776,12 +733,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 <!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#projects">Projects</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-  <a href="#contact" class="nav-cta">Start a Project →</a>
+  <a href="#home">الرئيسية</a>
+  <a href="#services">خدماتنا</a>
+  <a href="#projects">أعمالنا</a>
+  <a href="#about">من نحن</a>
+  <a href="#contact">تواصل معنا</a>
+  <a href="#contact" class="nav-cta">ابدأ مشروعك ←</a>
 </div>
 
 <!-- HERO -->
@@ -789,12 +746,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   <div class="container">
     <div class="hero-inner">
       <div class="hero-text">
-        <div class="hero-badge"><span class="dot"></span> DIGITAL EXPERIENCE • 2026</div>
-        <h1>WE BUILD DIGITAL EXPERIENCES THAT MAKE BUSINESSES <span class="grad">STAND OUT.</span></h1>
-        <p class="hero-desc">We create high-performance websites, digital experiences and smart solutions designed to turn visitors into customers.</p>
+        <div class="hero-badge"><span class="dot"></span> حلول رقمية متكاملة • 2026</div>
+        <h1>نبني تجارب رقمية تميز عملك وتجعلك <span class="grad">تتصدر السوق.</span></h1>
+        <p class="hero-desc">نصمم ونطور متاجر إلكترونية، صفحات هبوط، وأنظمة تسيير مخصصة (مخازن، ورشات، شركات) بأعلى معايير الأداء والأمان لتحويل زوارك إلى عملاء دائمين.</p>
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary" data-ripple>Start Your Project <span class="arrow">→</span></a>
-          <a href="#projects" class="btn btn-ghost" data-ripple>View Our Work</a>
+          <a href="#contact" class="btn btn-primary" data-ripple>اطلب عرض سعر <span class="arrow">←</span></a>
+          <a href="#projects" class="btn btn-ghost" data-ripple>شاهد أعمالنا</a>
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
@@ -802,28 +759,28 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         <div class="browser-mock">
           <div class="browser-bar">
             <div class="dots"><span></span><span></span><span></span></div>
-            <div class="url">salahdigital.com/dashboard</div>
+            <div class="url">app.web-script.dz/dashboard</div>
           </div>
           <div class="browser-body">
             <div class="row">
               <div class="card">
-                <div class="label">Revenue</div>
-                <div class="val up">$48.2K</div>
+                <div class="label">المبيعات</div>
+                <div class="val up">482,000 دج</div>
                 <div class="mini-chart"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
               </div>
               <div class="card">
-                <div class="label">Conversion</div>
+                <div class="label">معدل التحويل</div>
                 <div class="val up">+24.8%</div>
                 <div class="mini-chart"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
               </div>
             </div>
             <div class="row">
               <div class="card">
-                <div class="label">Active Users</div>
-                <div class="val">12,847</div>
+                <div class="label">الطلبات الجديدة</div>
+                <div class="val">1,247</div>
               </div>
               <div class="card">
-                <div class="label">Bounce Rate</div>
+                <div class="label">معدل الارتداد</div>
                 <div class="val down">-8.2%</div>
               </div>
             </div>
@@ -831,15 +788,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         </div>
         <div class="floating-card fc-1">
           <div class="ic">⚡</div>
-          <div><div class="t">Performance 99</div><div class="s">PageSpeed score</div></div>
+          <div><div class="t">أداء 99/100</div><div class="s">نتيجة PageSpeed</div></div>
         </div>
         <div class="floating-card fc-2">
-          <div class="ic"></div>
-          <div><div class="t">+312% Traffic</div><div class="s">Last 90 days</div></div>
+          <div class="ic">📈</div>
+          <div><div class="t">+312% زيارات</div><div class="s">خلال 90 يوماً</div></div>
         </div>
         <div class="floating-card fc-3">
           <div class="ic">🎯</div>
-          <div><div class="t">ROI Optimized</div><div class="s">Data-driven design</div></div>
+          <div><div class="t">عائد استثمار مرتفع</div><div class="s">تصميم مبني على البيانات</div></div>
         </div>
       </div>
     </div>
@@ -850,10 +807,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <section class="stats" id="about">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat reveal"><div class="num" data-count="50">0</div><div class="lbl">Projects Delivered</div></div>
-      <div class="stat reveal delay-1"><div class="num" data-count="30">0</div><div class="lbl">Happy Clients</div></div>
-      <div class="stat reveal delay-2"><div class="num" data-count="99" data-suffix="%">0</div><div class="lbl">Satisfaction Rate</div></div>
-      <div class="stat reveal delay-3"><div class="num">24/7</div><div class="lbl">Dedicated Support</div></div>
+      <div class="stat reveal"><div class="num" data-count="50">0</div><div class="lbl">مشروع منجز</div></div>
+      <div class="stat reveal delay-1"><div class="num" data-count="30">0</div><div class="lbl">عميل سعيد</div></div>
+      <div class="stat reveal delay-2"><div class="num" data-count="99" data-suffix="%">0</div><div class="lbl">معدل الرضا</div></div>
+      <div class="stat reveal delay-3"><div class="num">24/7</div><div class="lbl">دعم فني متواصل</div></div>
     </div>
   </div>
 </section>
@@ -862,52 +819,34 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <section id="services">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-tag">What We Build</div>
-      <h2 class="section-title">Crafted solutions for <span class="grad">ambitious brands</span></h2>
-      <p class="section-desc">From pixel-perfect landing pages to full-scale web platforms, we engineer digital products that perform, convert and scale.</p>
+      <div class="section-tag">خدماتنا وأسعارنا</div>
+      <h2 class="section-title">حلول مصممة لنمو <span class="grad">طموحاتك الرقمية</span></h2>
+      <p class="section-desc">أسعار شفافة وجودة لا تضاهى. نبدأ من الصفحات البسيطة وصولاً إلى الأنظمة المؤسسية المعقدة.</p>
     </div>
     <div class="services-grid">
       <article class="service reveal" data-service="1">
         <div class="num">01</div>
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg></div>
-        <h3>Business Websites</h3>
-        <p>High-converting corporate websites engineered to build authority and generate qualified leads.</p>
-        <span class="more" data-modal="service1">Learn more <span class="arrow">→</span></span>
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></div>
+        <h3>متجر إلكتروني متكامل</h3>
+        <p>متجر احترافي مع لوحة تحكم متقدمة لإضافة المنتجات، تعديل الأسعار، وإدارة الطلبات بكل سهولة.</p>
+        <span class="price-tag">8,500 دج</span>
+        <span class="more" data-modal="service1">التفاصيل <span class="arrow">←</span></span>
       </article>
       <article class="service reveal delay-1" data-service="2">
         <div class="num">02</div>
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></div>
-        <h3>E-Commerce</h3>
-        <p>Scalable online stores with premium UX, secure checkout and optimized conversion funnels.</p>
-        <span class="more" data-modal="service2">Learn more <span class="arrow">→</span></span>
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3>صفحة هبوط احترافية</h3>
+        <p>صفحة مخصصة لمنتجين كحد أقصى، مصممة لتحويل الزوار إلى عملاء، مرفقة بلوحة استقبال طلبات.</p>
+        <span class="price-tag">2,500 دج</span>
+        <span class="more" data-modal="service2">التفاصيل <span class="arrow">←</span></span>
       </article>
       <article class="service reveal delay-2" data-service="3">
         <div class="num">03</div>
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <h3>Landing Pages</h3>
-        <p>Conversion-focused landing pages built to turn traffic into measurable business results.</p>
-        <span class="more" data-modal="service3">Learn more <span class="arrow">→</span></span>
-      </article>
-      <article class="service reveal" data-service="4">
-        <div class="num">04</div>
         <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
-        <h3>Booking Systems</h3>
-        <p>Smart reservation platforms with calendar sync, payments and automated reminders.</p>
-        <span class="more" data-modal="service4">Learn more <span class="arrow">→</span></span>
-      </article>
-      <article class="service reveal delay-1" data-service="5">
-        <div class="num">05</div>
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-        <h3>Web Applications</h3>
-        <p>Custom dashboards, SaaS platforms and internal tools built with modern, scalable stacks.</p>
-        <span class="more" data-modal="service5">Learn more <span class="arrow">→</span></span>
-      </article>
-      <article class="service reveal delay-2" data-service="6">
-        <div class="num">06</div>
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-        <h3>Custom Digital Solutions</h3>
-        <p>Tailored integrations, APIs and automation systems designed around your unique workflow.</p>
-        <span class="more" data-modal="service6">Learn more <span class="arrow">→</span></span>
+        <h3>أنظمة تسيير مخصصة</h3>
+        <p>حلول برمجية حسب الطلب: تسيير المخزن، ورشات الشركات، وأنظمة ERP شاملة لإدارة مواردك.</p>
+        <span class="price-tag">حسب المواصفات</span>
+        <span class="more" data-modal="service3">التفاصيل <span class="arrow">←</span></span>
       </article>
     </div>
   </div>
@@ -917,48 +856,48 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <section id="features">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-tag">More Than Just A Website</div>
-      <h2 class="section-title">Built for <span class="grad">performance, security & scale</span></h2>
-      <p class="section-desc">Every project we deliver is engineered with the same standards used by world-class digital teams.</p>
+      <div class="section-tag">لماذا تختارنا؟</div>
+      <h2 class="section-title">مبني من أجل <span class="grad">الأداء، الأمان، والقابلية للتوسع</span></h2>
+      <p class="section-desc">كل مشروع نسلمه يخضع لأعلى المعايير التقنية المستخدمة في كبرى الشركات الرقمية العالمية.</p>
     </div>
     <div class="features">
       <div class="feature big reveal">
         <div>
           <div class="emoji">⚡</div>
-          <h3>High Performance, Out of the Box</h3>
-          <p>Lightning-fast load times, optimized assets and clean code that scores 95+ on Core Web Vitals.</p>
+          <h3>أداء فائق السرعة</h3>
+          <p>أوقات تحميل فائقة، أصول محسنة، وكود نظيف يحقق نتائج 95+ في اختبارات Core Web Vitals.</p>
         </div>
         <div class="visual"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
       </div>
       <div class="feature md reveal delay-1">
         <div class="emoji">📱</div>
-        <h3>Fully Responsive</h3>
-        <p>Pixel-perfect on every device, from 320px phones to 4K displays.</p>
+        <h3>متجاوب تماماً</h3>
+        <p>دقة بكسل مثالية على كل الأجهزة، من هواتف 320px إلى شاشات 4K.</p>
       </div>
       <div class="feature md reveal delay-2">
         <div class="emoji">🔐</div>
-        <h3>Secure Architecture</h3>
-        <p>Hardened infrastructure with best-practice security and data protection.</p>
+        <h3>بنية تحتية آمنة</h3>
+        <p>حماية متقدمة وأفضل الممارسات الأمنية لحماية بيانات عملك وعملائك.</p>
       </div>
       <div class="feature wide reveal">
         <div class="emoji">🎨</div>
-        <h3>Premium UI/UX</h3>
-        <p>Interfaces designed to delight users and drive measurable business outcomes.</p>
+        <h3>تصميم واجهات احترافي</h3>
+        <p>واجهات مصممة لإسعاد المستخدمين ودفع نتائج أعمال قابلة للقياس.</p>
       </div>
       <div class="feature wide reveal delay-1">
-        <div class="emoji"></div>
-        <h3>SEO Ready</h3>
-        <p>Technical SEO baked in — semantic markup, schema, speed and crawlability.</p>
+        <div class="emoji">🔍</div>
+        <h3>جاهز لمحركات البحث (SEO)</h3>
+        <p>تحسين تقني مدمج: علامات دلالية، سرعة، وهيكلية سهلة الزحف.</p>
       </div>
       <div class="feature sm reveal delay-2">
         <div class="emoji">🤖</div>
-        <h3>Smart Features</h3>
-        <p>AI-powered tools, automations and integrations that work for you 24/7.</p>
+        <h3>ميزات ذكية</h3>
+        <p>أتمتة وإشعارات فورية تعمل لصالحك على مدار الساعة.</p>
       </div>
       <div class="feature sm reveal delay-3">
         <div class="emoji">📊</div>
-        <h3>Analytics Built-In</h3>
-        <p>Track what matters with clean dashboards and actionable insights.</p>
+        <h3>لوحة تحكم شاملة</h3>
+        <p>تابع ما يهمك مع لوحات معلومات نظيفة ورؤى قابلة للتنفيذ.</p>
       </div>
     </div>
   </div>
@@ -968,138 +907,65 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <section id="projects">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-tag">Selected Projects</div>
-      <h2 class="section-title">Work that <span class="grad">speaks for itself</span></h2>
-      <p class="section-desc">A curated selection of recent projects across industries — each one engineered to solve real business problems.</p>
+      <div class="section-tag">معرض الأعمال</div>
+      <h2 class="section-title">أعمال تتحدث <span class="grad">عن جودتنا</span></h2>
+      <p class="section-desc">مجموعة مختارة من مشاريعنا الحقيقية والنماذج الاحترافية التي تعكس قدرتنا على حل مشاكل الأعمال الحقيقية.</p>
     </div>
     <div class="projects-grid">
       <article class="project reveal" data-tilt data-project="1">
-        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80" alt="Luxury Restaurant website" onerror="this.style.display='none'"/></div>
+        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=900&q=80" alt="Elixiria Rose Landing Page" onerror="this.style.display='none'"/></div>
         <div class="project-info">
-          <div class="project-cat">Hospitality • Website</div>
-          <h3>Maison Noir — Luxury Restaurant</h3>
-          <p>A refined digital experience for a Michelin-level dining brand, with online reservations and immersive storytelling.</p>
-          <span class="project-link" data-modal="project1">View Case Study <span class="arrow">→</span></span>
+          <div class="project-cat">صفحة هبوط + لوحة تحكم</div>
+          <h3>Elixiria Rose</h3>
+          <p>صفحة هبوط أنيقة لمنتجات التجميل، مرفقة بلوحة تحكم خاصة لاستقبال وإدارة الطلبات بكفاءة عالية.</p>
+          <a href="https://elixiriarose.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">معاينة المشروع <span class="arrow">←</span></a>
         </div>
       </article>
       <article class="project reveal delay-1" data-tilt data-project="2">
-        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&q=80" alt="E-commerce store" onerror="this.style.display='none'"/></div>
+        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&q=80" alt="Dady Cosmetic E-commerce" onerror="this.style.display='none'"/></div>
         <div class="project-info">
-          <div class="project-cat">E-Commerce • Shopify</div>
-          <h3>Atelier — Premium Fashion Store</h3>
-          <p>A high-converting fashion e-commerce platform with custom checkout, loyalty system and global shipping.</p>
-          <span class="project-link" data-modal="project2">View Case Study <span class="arrow">→</span></span>
+          <div class="project-cat">متجر إلكتروني متكامل</div>
+          <h3>Dady Cosmetic</h3>
+          <p>متجر إلكتروني متكامل يتيح عرض المنتجات، مع لوحة تحكم متقدمة لإضافة المنتجات، تعديل الأسعار، ومتابعة الطلبات.</p>
+          <a href="https://dady-cosmetic.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">معاينة المشروع <span class="arrow">←</span></a>
         </div>
       </article>
       <article class="project reveal" data-tilt data-project="3">
-        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?w=900&q=80" alt="Swimming pool company" onerror="this.style.display='none'"/></div>
+        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=80" alt="نظام تسيير المخزن" onerror="this.style.display='none'"/></div>
         <div class="project-info">
-          <div class="project-cat">Services • Booking</div>
-          <h3>AquaLux — Swimming Pool Company</h3>
-          <p>A lead-generating website with 3D pool configurator, quote requests and automated follow-ups.</p>
-          <span class="project-link" data-modal="project3">View Case Study <span class="arrow">→</span></span>
+          <div class="project-cat">أنظمة مخصصة • تسيير</div>
+          <h3>SmartStock — نظام تسيير المخزن</h3>
+          <p>حل رقمي ذكي لتتبع المخزون، تنبيهات النفاد التلقائية، وإدارة الحركات الواردة والصادرة بدقة متناهية.</p>
+          <span class="project-link" data-modal="project3">دراسة الحالة <span class="arrow">←</span></span>
         </div>
       </article>
       <article class="project reveal delay-1" data-tilt data-project="4">
-        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=900&q=80" alt="Automotive workshop" onerror="this.style.display='none'"/></div>
+        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=900&q=80" alt="نظام تسيير ورشات الشركات" onerror="this.style.display='none'"/></div>
         <div class="project-info">
-          <div class="project-cat">Automotive • Platform</div>
-          <h3>GaragePro — Automotive Workshop</h3>
-          <p>A complete workshop management platform with online booking, invoicing and customer portal.</p>
-          <span class="project-link" data-modal="project4">View Case Study <span class="arrow">→</span></span>
+          <div class="project-cat">أنظمة مخصصة • ورشات</div>
+          <h3>WorkshopPro — تسيير ورشات الشركات</h3>
+          <p>منصة شاملة لإدارة ورشات الصيانة والإنتاج، جدولة المهام، ومتابعة قطع الغيار والموارد البشرية.</p>
+          <span class="project-link" data-modal="project4">دراسة الحالة <span class="arrow">←</span></span>
         </div>
       </article>
       <article class="project reveal" data-tilt data-project="5">
-        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80" alt="Corporate business" onerror="this.style.display='none'"/></div>
+        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80" alt="نظام تسيير الشركات الشامل" onerror="this.style.display='none'"/></div>
         <div class="project-info">
-          <div class="project-cat">Corporate • Branding</div>
-          <h3>Nexus Group — Corporate Identity</h3>
-          <p>A premium corporate website with multi-language support, investor portal and CMS integration.</p>
-          <span class="project-link" data-modal="project5">View Case Study <span class="arrow">→</span></span>
+          <div class="project-cat">أنظمة مخصصة • ERP</div>
+          <h3>Enterprise ERP — تسيير الشركات الشامل</h3>
+          <p>نظام متكامل لإدارة الموارد البشرية، المحاسبة، والمبيعات في لوحة واحدة موحدة وسهلة الاستخدام.</p>
+          <span class="project-link" data-modal="project5">دراسة الحالة <span class="arrow">←</span></span>
         </div>
       </article>
       <article class="project reveal delay-1" data-tilt data-project="6">
-        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80" alt="Digital platform dashboard" onerror="this.style.display='none'"/></div>
+        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&q=80" alt="تصميم حسب الطلب" onerror="this.style.display='none'"/></div>
         <div class="project-info">
-          <div class="project-cat">SaaS • Web App</div>
-          <h3>Metric — Analytics Platform</h3>
-          <p>A real-time analytics dashboard with custom reports, team collaboration and API integrations.</p>
-          <span class="project-link" data-modal="project6">View Case Study <span class="arrow">→</span></span>
+          <div class="project-cat">حلول مخصصة • تصميم</div>
+          <h3>تصميم وتطوير حسب الطلب</h3>
+          <p>نحلل احتياجاتك الخاصة ونصمم حلاً رقمياً مفصلاً على مقاس عملك، مهما كانت تعقيداته أو متطلباته الفريدة.</p>
+          <span class="project-link" data-modal="project6">اكتشف المزيد <span class="arrow">←</span></span>
         </div>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- INTERACTIVE DEMO -->
-<section id="demo">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="section-tag">Interactive Demo</div>
-      <h2 class="section-title">A glimpse inside a <span class="grad">real web app</span></h2>
-      <p class="section-desc">We don't just build websites — we build powerful platforms. Here's a live preview of a custom admin dashboard.</p>
-    </div>
-    <div class="demo-wrap reveal">
-      <div class="demo-top">
-        <div class="dots"><span></span><span></span><span></span></div>
-        <div class="url">app.salahdigital.com/dashboard</div>
-        <div style="width:50px"></div>
-      </div>
-      <div class="demo-body">
-        <aside class="demo-side">
-          <div class="brand"><span class="logo-mark">S</span> SALAHDIGITAL</div>
-          <div class="nav-item active"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Dashboard</div>
-          <div class="nav-item"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg> Analytics</div>
-          <div class="nav-item"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg> Orders</div>
-          <div class="nav-item"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg> Customers</div>
-          <div class="nav-item"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4"/></svg> Settings</div>
-        </aside>
-        <main class="demo-main">
-          <div class="demo-header">
-            <h3>Welcome back, Alex 👋</h3>
-            <button class="btn btn-primary" data-ripple>Export Report →</button>
-          </div>
-          <div class="demo-stats">
-            <div class="demo-stat"><div class="lbl">Revenue</div><div class="val" data-count="48200" data-prefix="$">$0</div><div class="chg">↑ 12.4%</div></div>
-            <div class="demo-stat"><div class="lbl">Orders</div><div class="val" data-count="1847">0</div><div class="chg">↑ 8.2%</div></div>
-            <div class="demo-stat"><div class="lbl">Customers</div><div class="val" data-count="9421">0</div><div class="chg">↑ 24.1%</div></div>
-            <div class="demo-stat"><div class="lbl">Conversion</div><div class="val" data-count="24" data-suffix="%">0%</div><div class="chg down">↓ 1.8%</div></div>
-          </div>
-          <div class="demo-chart">
-            <h4>Revenue Overview — Last 12 months</h4>
-            <svg viewBox="0 0 600 140" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="lineGrad" x1="0" x2="1" y1="0" y2="0">
-                  <stop offset="0" stop-color="#a78bfa"/>
-                  <stop offset="1" stop-color="#22d3ee"/>
-                </linearGradient>
-                <linearGradient id="areaGrad" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0" stop-color="#a78bfa" stop-opacity=".5"/>
-                  <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <path class="area" d="M0,110 L50,90 L100,95 L150,70 L200,80 L250,50 L300,60 L350,30 L400,45 L450,25 L500,35 L550,15 L600,20 L600,140 L0,140 Z"/>
-              <path class="line" d="M0,110 L50,90 L100,95 L150,70 L200,80 L250,50 L300,60 L350,30 L400,45 L450,25 L500,35 L550,15 L600,20"/>
-            </svg>
-          </div>
-          <div class="demo-bottom">
-            <div class="demo-activity">
-              <h4>Recent Activity</h4>
-              <div class="demo-item"><span class="dot green"></span> New order #4821 received <span class="time">2m ago</span></div>
-              <div class="demo-item"><span class="dot"></span> Payment of $1,240 confirmed <span class="time">14m ago</span></div>
-              <div class="demo-item"><span class="dot cyan"></span> New customer registered <span class="time">1h ago</span></div>
-              <div class="demo-item"><span class="dot green"></span> Shipment #3921 delivered <span class="time">3h ago</span></div>
-            </div>
-            <div class="demo-notif">
-              <h4>Notifications</h4>
-              <div class="demo-item"><span class="dot"></span> Server load optimized <span class="time">Just now</span></div>
-              <div class="demo-item"><span class="dot green"></span> Backup completed <span class="time">30m ago</span></div>
-              <div class="demo-item"><span class="dot cyan"></span> New review (5★) <span class="time">2h ago</span></div>
-              <div class="demo-item"><span class="dot"></span> Weekly report ready <span class="time">5h ago</span></div>
-            </div>
-          </div>
-        </main>
-      </div>
     </div>
   </div>
 </section>
@@ -1108,33 +974,33 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <section id="testimonials">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-tag">What Our Clients Say</div>
-      <h2 class="section-title">Trusted by <span class="grad">ambitious teams</span></h2>
-      <p class="section-desc">Real feedback from founders and operators who trusted us with their digital growth.</p>
+      <div class="section-tag">آراء عملائنا</div>
+      <h2 class="section-title">موثوق من قبل <span class="grad">فرق طموحة</span></h2>
+      <p class="section-desc">تعليقات حقيقية من مؤسسين ومديرين وثقوا بنا لتنمية أعمالهم رقمياً.</p>
     </div>
     <div class="testimonials-grid">
       <article class="testimonial reveal">
         <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote>"SALAHDIGITAL delivered a website that completely transformed our online presence. Conversions jumped 3x in the first month — the ROI speaks for itself."</blockquote>
+        <blockquote>"web_script قدموا لنا متجراً إلكترونياً غيّر حضورنا الرقمي بالكامل. المبيعات قفزت 3 أضعاف في الشهر الأول، والعائد على الاستثمار يتحدث عن نفسه."</blockquote>
         <div class="who">
-          <div class="avatar">SM</div>
-          <div><div class="name">Sarah Mitchell</div><div class="role">CEO, Maison Noir</div></div>
+          <div class="avatar">س م</div>
+          <div><div class="name">سمير م.</div><div class="role">مؤسس، علامة تجارية محلية</div></div>
         </div>
       </article>
       <article class="testimonial reveal delay-1">
         <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote>"The level of craft and attention to detail is unmatched. They didn't just build a website — they built a growth engine for our business."</blockquote>
+        <blockquote>"مستوى الحرفية والاهتمام بالتفاصيل لا مثيل له. لم يبنوا مجرد موقع، بل بنوا محرك نمو حقيقي لأعمالنا مع لوحة تحكم سهلة جداً."</blockquote>
         <div class="who">
-          <div class="avatar">DK</div>
-          <div><div class="name">Daniel Kowalski</div><div class="role">Founder, Atelier</div></div>
+          <div class="avatar">أ ك</div>
+          <div><div class="name">أمينة ك.</div><div class="role">مديرة عمليات</div></div>
         </div>
       </article>
       <article class="testimonial reveal delay-2">
         <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote>"Professional, fast, and genuinely strategic. The dashboard they built saved our team 20+ hours per week. Worth every penny."</blockquote>
+        <blockquote>"احترافيون، سريعون، واستراتيجيون بحق. نظام تسيير الورشة الذي طوروه وفر على فريقنا أكثر من 20 ساعة أسبوعياً. يستحق كل دينار."</blockquote>
         <div class="who">
-          <div class="avatar">LR</div>
-          <div><div class="name">Lina Rossi</div><div class="role">COO, GaragePro</div></div>
+          <div class="avatar">ك ب</div>
+          <div><div class="name">كريم ب.</div><div class="role">مدير ورشة صناعية</div></div>
         </div>
       </article>
     </div>
@@ -1145,9 +1011,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <section>
   <div class="container">
     <div class="cta reveal">
-      <h2>READY TO BUILD SOMETHING <span style="background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;background-clip:text;color:transparent">AMAZING?</span></h2>
-      <p>Let's turn your idea into a powerful digital experience that drives real business results.</p>
-      <a href="#contact" class="btn btn-primary" data-ripple>Let's Talk <span class="arrow">→</span></a>
+      <h2>مستعد لبناء شيء <span style="background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;background-clip:text;color:transparent">استثنائي؟</span></h2>
+      <p>دعنا نحول فكرتك إلى تجربة رقمية قوية تقود نتائج أعمال حقيقية.</p>
+      <a href="#contact" class="btn btn-primary" data-ripple>لنتحدث الآن <span class="arrow">←</span></a>
     </div>
   </div>
 </section>
@@ -1156,71 +1022,70 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <section id="contact">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-tag">Get In Touch</div>
-      <h2 class="section-title">Let's start your <span class="grad">next project</span></h2>
-      <p class="section-desc">Tell us about your vision. We'll get back to you within 24 hours with a tailored proposal.</p>
+      <div class="section-tag">تواصل معنا</div>
+      <h2 class="section-title">لنبدأ <span class="grad">مشروعك القادم</span></h2>
+      <p class="section-desc">أخبرنا عن رؤيتك. سنعود إليك خلال 24 ساعة بعرض سعر مفصل ومخصص لاحتياجاتك.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info">
         <a href="https://wa.me/212671746345" target="_blank" rel="noopener noreferrer" class="contact-card reveal" style="text-decoration:none">
           <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
-          <div><h4>WhatsApp</h4><p>+212 671 746 345</p></div>
+          <div><h4>واتساب</h4><p dir="ltr" style="text-align:right">+212 671 746 345</p></div>
         </a>
         <a href="mailto:salhdaddi5@gmail.com" class="contact-card reveal delay-1" style="text-decoration:none">
           <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><h4>Email</h4><p>salhdaddi5@gmail.com</p></div>
+          <div><h4>البريد الإلكتروني</h4><p>salhdaddi5@gmail.com</p></div>
         </a>
         <div class="contact-card reveal delay-2">
           <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><h4>Location</h4><p>Algiers, Dar El Beida</p></div>
+          <div><h4>الموقع</h4><p>الجزائر، دار البيضاء</p></div>
         </div>
         <div class="contact-card reveal delay-3">
           <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div><h4>Availability</h4><p>Mon–Sat, 9:00 — 19:00 GMT</p></div>
+          <div><h4>أوقات العمل</h4><p>السبت - الخميس، 9:00 - 19:00</p></div>
         </div>
       </div>
       <form class="form reveal" id="contactForm" novalidate>
         <div class="form-row">
-          <div class="field"><label for="name">Full Name</label><input type="text" id="name" name="name" required minlength="2" autocomplete="name"/><span class="err">Please enter your name</span></div>
-          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required autocomplete="email"/><span class="err">Please enter a valid email</span></div>
+          <div class="field"><label for="name">الاسم الكامل</label><input type="text" id="name" name="name" required minlength="2" autocomplete="name"/><span class="err">الرجاء إدخال الاسم</span></div>
+          <div class="field"><label for="email">البريد الإلكتروني</label><input type="email" id="email" name="email" required autocomplete="email"/><span class="err">الرجاء إدخال بريد إلكتروني صحيح</span></div>
         </div>
         <div class="form-row">
-          <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" autocomplete="tel"/><span class="err">Please enter a valid phone</span></div>
-          <div class="field"><label for="company">Company</label><input type="text" id="company" name="company" autocomplete="organization"/></div>
+          <div class="field"><label for="phone">رقم الهاتف</label><input type="tel" id="phone" name="phone" autocomplete="tel"/><span class="err">الرجاء إدخال رقم هاتف صحيح</span></div>
+          <div class="field"><label for="company">اسم الشركة / المشروع</label><input type="text" id="company" name="company" autocomplete="organization"/></div>
         </div>
         <div class="form-row">
           <div class="field">
-            <label for="type">Project Type</label>
+            <label for="type">نوع المشروع</label>
             <select id="type" name="type" required>
-              <option value="">Select a type</option>
-              <option>Business Website</option>
-              <option>E-Commerce</option>
-              <option>Landing Page</option>
-              <option>Booking System</option>
-              <option>Web Application</option>
-              <option>Custom Solution</option>
+              <option value="">اختر نوع المشروع</option>
+              <option>متجر إلكتروني متكامل (8,500 دج)</option>
+              <option>صفحة هبوط لمنتجين (2,500 دج)</option>
+              <option>نظام تسيير مخزن</option>
+              <option>نظام تسيير ورشات</option>
+              <option>نظام تسيير شركات شامل (ERP)</option>
+              <option>تصميم وتطوير حسب الطلب</option>
             </select>
-            <span class="err">Please select a project type</span>
+            <span class="err">الرجاء اختيار نوع المشروع</span>
           </div>
           <div class="field">
-            <label for="budget">Budget Range</label>
+            <label for="budget">الميزانية المتوقعة</label>
             <select id="budget" name="budget" required>
-              <option value="">Select a range</option>
-              <option>$1K — $3K</option>
-              <option>$3K — $7K</option>
-              <option>$7K — $15K</option>
-              <option>$15K — $30K</option>
-              <option>$30K+</option>
+              <option value="">اختر النطاق</option>
+              <option>2,500 دج - 5,000 دج</option>
+              <option>5,000 دج - 10,000 دج</option>
+              <option>10,000 دج - 30,000 دج</option>
+              <option>أكثر من 30,000 دج</option>
             </select>
-            <span class="err">Please select a budget</span>
+            <span class="err">الرجاء اختيار الميزانية</span>
           </div>
         </div>
         <div class="field" style="margin-bottom:16px">
-          <label for="message">Project Details</label>
-          <textarea id="message" name="message" required minlength="10" placeholder="Tell us about your project, goals and timeline..."></textarea>
-          <span class="err">Please describe your project (min 10 chars)</span>
+          <label for="message">تفاصيل المشروع</label>
+          <textarea id="message" name="message" required minlength="10" placeholder="أخبرنا عن مشروعك، أهدافك، والجدول الزمني المتوقع..."></textarea>
+          <span class="err">الرجاء وصف مشروعك (10 أحرف على الأقل)</span>
         </div>
-        <button type="submit" class="btn btn-primary" data-ripple>Send Project Request <span class="arrow">→</span></button>
+        <button type="submit" class="btn btn-primary" data-ripple>إرسال طلب المشروع <span class="arrow">←</span></button>
       </form>
     </div>
   </div>
@@ -1231,40 +1096,40 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="#home" class="logo"><span class="logo-mark">S</span><span>SALAHDIGITAL</span></a>
-        <p>Digital experiences crafted for ambitious businesses. We build websites and platforms that grow with you.</p>
+        <a href="#home" class="logo">
+          <img src="logo.jpg" alt="web_script Logo" class="logo-img" />
+        </a>
+        <p>تجارب رقمية مصممة للشركات الطموحة. نبني مواقع ومنصات تنمو معك.</p>
         <div class="socials">
           <a href="https://www.instagram.com/webscript.com2026?stkn=MTU0Zng4Ymx6OXlpZA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
           <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-          <a href="#" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg></a>
           <a href="https://wa.me/212671746345" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
         </div>
       </div>
       <div class="footer-col">
-        <h5>Services</h5>
-        <a href="#services">Business Websites</a>
-        <a href="#services">E-Commerce</a>
-        <a href="#services">Landing Pages</a>
-        <a href="#services">Web Applications</a>
+        <h5>الخدمات</h5>
+        <a href="#services">متاجر إلكترونية</a>
+        <a href="#services">صفحات هبوط</a>
+        <a href="#services">أنظمة تسيير مخصصة</a>
+        <a href="#services">تصميم حسب الطلب</a>
       </div>
       <div class="footer-col">
-        <h5>Company</h5>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#testimonials">Reviews</a>
+        <h5>الشركة</h5>
+        <a href="#projects">أعمالنا</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">تواصل معنا</a>
+        <a href="#testimonials">آراء العملاء</a>
       </div>
       <div class="footer-col">
-        <h5>Legal</h5>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Cookie Policy</a>
+        <h5>قانوني</h5>
+        <a href="#">سياسة الخصوصية</a>
+        <a href="#">شروط الخدمة</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2026 SALAH DADDI. All rights reserved.</div>
-      <div>Crafted with precision for ambitious brands.</div>
+      <div>© 2026 web_script. جميع الحقوق محفوظة.</div>
+      <div>صُمم بدقة للعلامات التجارية الطموحة.</div>
     </div>
   </div>
 </footer>
@@ -1275,7 +1140,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 </button>
 
 <!-- Toast -->
-<div class="toast" id="toast" role="status" aria-live="polite">✓ Message sent successfully!</div>
+<div class="toast" id="toast" role="status" aria-live="polite">✓ تم إرسال رسالتك بنجاح!</div>
 
 <!-- MODALS -->
 <div class="modal-overlay" id="modalOverlay">
@@ -1291,8 +1156,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 <script>
 /* =========================================================
-   SALAHDIGITAL — Interactions
-   Clean, modular, performant.
+   web_script — Interactions
    ========================================================= */
 (function(){
   'use strict';
@@ -1300,125 +1164,99 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   /* ---------- Modal Data ---------- */
   const modalData = {
     service1: {
-      tag: 'Service Details',
-      title: 'Business Websites',
-      desc: 'Professional corporate websites that establish credibility and drive business growth.',
+      tag: 'تفاصيل الخدمة',
+      title: 'متجر إلكتروني متكامل',
+      desc: 'حل تجاري متكامل يتيح لك بيع منتجاتك عبر الإنترنت بكفاءة واحترافية.',
       sections: [
-        {title: 'What You Get', items: ['Custom design tailored to your brand', 'Mobile-first responsive design', 'Fast loading speeds (95+ PageSpeed)', 'SEO optimization', 'Contact forms & lead generation', 'Content management system', 'Security & SSL certificate']},
-        {title: 'Technologies', items: ['HTML5 & CSS3', 'JavaScript (React/Vue optional)', 'WordPress/Headless CMS', 'Cloud hosting', 'Analytics integration']},
-        {title: 'Timeline & Investment', items: ['Typical timeline: 3-6 weeks', 'Starting from $3,000', 'Ongoing support available', 'Free 30-day maintenance']}
+        {title: 'ما ستحصل عليه', items: ['تصميم مخصص يعكس هوية علامتك التجارية', 'لوحة تحكم لإضافة المنتجات وتعديل الأسعار', 'نظام إدارة طلبات متكامل', 'تصميم متجاوب مع جميع الهواتف', 'تحسين محركات البحث (SEO) الأساسي', 'شهادة أمان SSL مجانية', 'دعم فني لمدة 30 يوماً']},
+        {title: 'التقنيات المستخدمة', items: ['أحدث أطر عمل الواجهات الأمامية', 'قواعد بيانات آمنة وسريعة', 'بوابات دفع إلكتروني آمنة', 'استضافة سحابية عالية الأداء']},
+        {title: 'الاستثمار والجدول الزمني', items: ['السعر: 8,500 دج', 'مدة التنفيذ: 2-4 أسابيع', 'تسليم شامل مع تدريب على الاستخدام']}
       ]
     },
     service2: {
-      tag: 'Service Details',
-      title: 'E-Commerce Solutions',
-      desc: 'Complete online stores designed to maximize sales and customer satisfaction.',
+      tag: 'تفاصيل الخدمة',
+      title: 'صفحة هبوط احترافية',
+      desc: 'صفحة واحدة مركزة ومصممة خصيصاً لتحويل الزوار إلى عملاء لمنتجين كحد أقصى.',
       sections: [
-        {title: 'Features Included', items: ['Product catalog management', 'Secure payment gateways', 'Shopping cart & checkout', 'Inventory management', 'Order tracking', 'Customer accounts', 'Email notifications', 'Multi-currency support']},
-        {title: 'Platforms', items: ['Shopify', 'WooCommerce', 'Custom solutions', 'Headless commerce']},
-        {title: 'Results', items: ['Average conversion increase: 40%', 'Mobile optimization', 'SEO-ready structure', 'Fast checkout process']}
+        {title: 'ما ستحصل عليه', items: ['تصميم جذاب يركز على دعوة لاتخاذ إجراء (CTA)', 'لوحة تحكم بسيطة لاستقبال الطلبات', 'سرعة تحميل فائقة', 'متوافقة تماماً مع الجوال', 'نموذج اتصال أو طلب مدمج', 'تتبع وتحليلات أساسية']},
+        {title: 'حالات الاستخدام المثالية', items: ['إطلاق منتج جديد', 'جمع بيانات العملاء المحتملين', 'الترويج لعرض محدود الوقت', 'تسجيل المشاركين في فعالية']},
+        {title: 'الاستثمار والجدول الزمني', items: ['السعر: 2,500 دج', 'مدة التنفيذ: 3-7 أيام عمل', 'تعديلان مجانيان على التصميم']}
       ]
     },
     service3: {
-      tag: 'Service Details',
-      title: 'Landing Pages',
-      desc: 'High-converting landing pages designed to turn visitors into customers.',
+      tag: 'تفاصيل الخدمة',
+      title: 'أنظمة تسيير مخصصة',
+      desc: 'حلول برمجية مصممة خصيصاً لأتمتة وتبسيط عمليات عملك الداخلية.',
       sections: [
-        {title: 'What Makes Them Work', items: ['A/B testing ready', 'Clear call-to-action', 'Fast load times', 'Mobile optimized', 'Lead capture forms', 'Analytics tracking', 'Heat map integration']},
-        {title: 'Use Cases', items: ['Product launches', 'Event registrations', 'Lead generation', 'App downloads', 'Webinar signups']}
-      ]
-    },
-    service4: {
-      tag: 'Service Details',
-      title: 'Booking Systems',
-      desc: 'Smart reservation platforms that automate your scheduling.',
-      sections: [
-        {title: 'Core Features', items: ['Real-time availability', 'Calendar sync (Google, Outlook)', 'Automated reminders', 'Payment integration', 'Multi-staff support', 'Service customization', 'Customer management']},
-        {title: 'Industries', items: ['Restaurants & cafes', 'Salons & spas', 'Medical clinics', 'Fitness centers', 'Consulting services']}
-      ]
-    },
-    service5: {
-      tag: 'Service Details',
-      title: 'Web Applications',
-      desc: 'Custom software solutions built for your specific business needs.',
-      sections: [
-        {title: 'What We Build', items: ['Admin dashboards', 'SaaS platforms', 'Internal tools', 'Customer portals', 'API integrations', 'Database management', 'Real-time features']},
-        {title: 'Tech Stack', items: ['React/Vue/Angular', 'Node.js/Python', 'PostgreSQL/MongoDB', 'AWS/Cloud hosting', 'RESTful APIs']}
-      ]
-    },
-    service6: {
-      tag: 'Service Details',
-      title: 'Custom Digital Solutions',
-      desc: 'Tailored integrations and automation systems.',
-      sections: [
-        {title: 'Services', items: ['API development', 'Third-party integrations', 'Workflow automation', 'Data migration', 'Custom plugins', 'System architecture']},
-        {title: 'Integration Partners', items: ['CRM systems', 'Payment processors', 'Email marketing', 'Analytics tools', 'Cloud services']}
+        {title: 'أنظمة تسيير المخزن', items: ['تتبع الكميات والتنبيه عند النفاد', 'إدارة الحركات الواردة والصادرة', 'تقارير الجرد التلقائية', 'دعم الباركود']},
+        {title: 'تسيير ورشات الشركات', items: ['جدولة المهام والمواعيد', 'إدارة قطع الغيار والمواد', 'متابعة أداء الفنيين', 'فواتير وصيانة وقائية']},
+        {title: 'أنظمة تسيير الشركات (ERP)', items: ['إدارة الموارد البشرية (HR)', 'المحاسبة والفواتير', 'إدارة علاقات العملاء (CRM)', 'لوحات معلومات تنفيذية']},
+        {title: 'الاستثمار', items: ['السعر: يتم تحديده حسب المواصفات الدقيقة', 'تحليل مجاني لاحتياجاتك قبل البدء', 'عقد صيانة ودعم فني مستمر متاح']}
       ]
     },
     project1: {
-      tag: 'Case Study',
-      title: 'Maison Noir — Luxury Restaurant',
-      desc: 'Creating an immersive digital experience for a Michelin-level dining establishment.',
-      stats: [{num: '+156%', label: 'Reservation Increase'}, {num: '4.9/5', label: 'Customer Rating'}, {num: '3s', label: 'Load Time'}],
+      tag: 'مشروع حقيقي',
+      title: 'Elixiria Rose',
+      desc: 'صفحة هبوط أنيقة لمنتجات التجميل، مرفقة بلوحة تحكم خاصة.',
+      stats: [{num: '+150%', label: 'زيادة الطلبات'}, {num: '1.8s', label: 'سرعة التحميل'}, {num: '100%', label: 'رضا العميل'}],
       sections: [
-        {title: 'The Challenge', content: 'Maison Noir needed a website that reflected their luxury brand while providing seamless online reservations and showcasing their unique culinary experience.'},
-        {title: 'Our Solution', content: 'We created a stunning visual experience with smooth animations, an integrated reservation system, and immersive storytelling through high-quality photography and video.'},
-        {title: 'Key Features', items: ['Online reservation system', 'Interactive menu', 'Photo gallery', 'Event booking', 'Private dining requests', 'Newsletter integration']}
+        {title: 'التحدي', content: 'الحاجة إلى واجهة جذابة تبرز جمالية المنتجات مع نظام بسيط لاستقبال الطلبات دون تعقيد.'},
+        {title: 'الحل', content: 'تصميم صفحة هبوط عصرية مع نماذج طلب سريعة، ولوحة تحكم خلفية تتيح للعميل متابعة الطلبات الجديدة فوراً.'},
+        {title: 'الميزات الرئيسية', items: ['تصميم بصري فاخر', 'نموذج طلب سريع', 'لوحة تحكم لاستقبال الطلبات', 'تحسين لمحركات البحث']}
       ]
     },
     project2: {
-      tag: 'Case Study',
-      title: 'Atelier — Premium Fashion Store',
-      desc: 'A high-end e-commerce platform for luxury fashion.',
-      stats: [{num: '+240%', label: 'Sales Growth'}, {num: '68%', label: 'Mobile Conversions'}, {num: '2.1s', label: 'Page Speed'}],
+      tag: 'مشروع حقيقي',
+      title: 'Dady Cosmetic',
+      desc: 'متجر إلكتروني متكامل مع لوحة تحكم متقدمة.',
+      stats: [{num: '+200%', label: 'نمو المبيعات'}, {num: '50+', label: 'منتج مدرج'}, {num: '24/7', label: 'أتمتة الطلبات'}],
       sections: [
-        {title: 'The Challenge', content: 'Atelier needed to transition from physical to digital while maintaining their premium brand experience and providing world-class customer service.'},
-        {title: 'Our Solution', content: 'Built on Shopify Plus with custom features including virtual styling appointments, loyalty program, and global shipping integration.'},
-        {title: 'Key Features', items: ['Shopify Plus platform', 'Virtual styling bookings', 'Loyalty rewards system', 'Multi-currency checkout', 'AR try-on feature', 'Size recommendation AI']}
+        {title: 'التحدي', content: 'تحويل العمل التقليدي إلى متجر إلكتروني يسمح بإدارة المنتجات والأسعار والطلبات بشكل مستقل.'},
+        {title: 'الحل', content: 'بناء متجر إلكتروني كامل مع لوحة تحكم تتيح إضافة المنتجات، تعديل الأسعار، ومتابعة حالة الطلبات من الاستلام إلى التوصيل.'},
+        {title: 'الميزات الرئيسية', items: ['لوحة تحكم شاملة', 'إدارة المخزون والأسعار', 'سلة تسوق سلسة', 'تصميم متجاوب مع الجوال']}
       ]
     },
     project3: {
-      tag: 'Case Study',
-      title: 'AquaLux — Swimming Pool Company',
-      desc: 'Lead generation platform with 3D configurator.',
-      stats: [{num: '+320%', label: 'Qualified Leads'}, {num: '45%', label: 'Quote Requests'}, {num: '24/7', label: 'Availability'}],
+      tag: 'نظام مخصص',
+      title: 'SmartStock — نظام تسيير المخزن',
+      desc: 'حل رقمي ذكي لتتبع المخزون وإدارة الحركات بدقة.',
+      stats: [{num: '-40%', label: 'فقدان المخزون'}, {num: '99%', label: 'دقة الجرد'}, {num: '3x', label: 'سرعة المعالجة'}],
       sections: [
-        {title: 'The Challenge', content: 'AquaLux struggled with inefficient lead qualification and needed a way to showcase their custom pool designs.'},
-        {title: 'Our Solution', content: 'Developed an interactive 3D pool configurator and automated lead qualification system with instant quote generation.'},
-        {title: 'Key Features', items: ['3D pool configurator', 'Instant quote calculator', 'Automated follow-ups', 'Project gallery', 'Financing options', 'Consultation booking']}
+        {title: 'التحدي', content: 'صعوبة تتبع الكميات يدوياً مما يؤدي إلى نفاد المنتجات دون إشعار أو تراكم مخزون راكد.'},
+        {title: 'الحل', content: 'نظام مركزي يسجل كل حركة دخول وخروج، مع تنبيهات تلقائية عند وصول المنتج للحد الأدنى.'},
+        {title: 'الميزات الرئيسية', items: ['تنبيهات النفاد التلقائية', 'تقارير الجرد الدورية', 'إدارة الموردين', 'دعم الباركود']}
       ]
     },
     project4: {
-      tag: 'Case Study',
-      title: 'GaragePro — Automotive Workshop',
-      desc: 'Complete workshop management platform.',
-      stats: [{num: '85%', label: 'Time Saved'}, {num: '+180%', label: 'Customer Retention'}, {num: '99%', label: 'Uptime'}],
+      tag: 'نظام مخصص',
+      title: 'WorkshopPro — تسيير ورشات الشركات',
+      desc: 'منصة شاملة لإدارة ورشات الصيانة والإنتاج.',
+      stats: [{num: '85%', label: 'توفير الوقت'}, {num: '+180%', label: 'رضا العملاء'}, {num: '0', label: 'أخطاء الفوترة'}],
       sections: [
-        {title: 'The Challenge', content: 'GaragePro was managing everything manually — appointments, invoices, customer records — leading to errors and lost revenue.'},
-        {title: 'Our Solution', content: 'Built a comprehensive platform integrating booking, invoicing, customer management, and automated service reminders.'},
-        {title: 'Key Features', items: ['Online booking system', 'Digital invoicing', 'Customer portal', 'Service reminders', 'Parts inventory', 'Technician scheduling', 'Payment processing']}
+        {title: 'التحدي', content: 'إدارة المواعيد، قطع الغيار، والفواتير يدوياً مما يسبب أخطاء وتأخيرات.'},
+        {title: 'الحل', content: 'منصة رقمية تربط بين الاستقبال، الورشة، والمخزن، مع إشعارات تلقائية للعملاء بحالة مركباتهم أو طلباتهم.'},
+        {title: 'الميزات الرئيسية', items: ['جدولة المواعيد', 'متابعة قطع الغيار', 'فواتير رقمية', 'سجل صيانة لكل عميل']}
       ]
     },
     project5: {
-      tag: 'Case Study',
-      title: 'Nexus Group — Corporate Identity',
-      desc: 'Premium corporate website with investor portal.',
-      stats: [{num: '5', label: 'Languages'}, {num: '+95%', label: 'Investor Engagement'}, {num: 'A+', label: 'Security Rating'}],
+      tag: 'نظام مخصص',
+      title: 'Enterprise ERP — تسيير الشركات الشامل',
+      desc: 'نظام متكامل لإدارة موارد الشركة في لوحة واحدة.',
+      stats: [{num: '5', label: 'أقسام مدمجة'}, {num: '+95%', label: 'شفافية البيانات'}, {num: 'A+', label: 'أمان النظام'}],
       sections: [
-        {title: 'The Challenge', content: 'Nexus Group needed a sophisticated web presence that could serve multiple stakeholders — clients, investors, and partners — across different regions.'},
-        {title: 'Our Solution', content: 'Created a multi-language corporate website with secure investor portal, CMS for easy updates, and advanced security measures.'},
-        {title: 'Key Features', items: ['Multi-language support', 'Investor portal', 'Secure document library', 'News & press releases', 'Careers section', 'Contact management', 'Analytics dashboard']}
+        {title: 'التحدي', content: 'تشتت البيانات بين أقسام الموارد البشرية، المحاسبة، والمبيعات مما يعيق اتخاذ القرار.'},
+        {title: 'الحل', content: 'نظام ERP موحد يربط جميع الأقسام في قاعدة بيانات واحدة مع لوحات معلومات للمديرين.'},
+        {title: 'الميزات الرئيسية', items: ['إدارة الرواتب والحضور', 'الفوترة والمحاسبة', 'إدارة علاقات العملاء', 'تقارير أداء فورية']}
       ]
     },
     project6: {
-      tag: 'Case Study',
-      title: 'Metric — Analytics Platform',
-      desc: 'Real-time analytics dashboard for data-driven teams.',
-      stats: [{num: '10K+', label: 'Active Users'}, {num: '50ms', label: 'Data Refresh'}, {num: '99.9%', label: 'Uptime'}],
+      tag: 'خدمة مخصصة',
+      title: 'تصميم وتطوير حسب الطلب',
+      desc: 'نحلل احتياجاتك الخاصة ونصمم حلاً رقمياً مفصلاً على مقاس عملك.',
+      stats: [{num: '100%', label: 'تفصيل حسب الطلب'}, {num: '24/7', label: 'دعم تقني'}, {num: '∞', label: 'قابلية التوسع'}],
       sections: [
-        {title: 'The Challenge', content: 'Metric needed a scalable analytics platform that could handle massive data volumes while providing instant insights.'},
-        {title: 'Our Solution', content: 'Built a modern web application with real-time data processing, customizable dashboards, and collaborative features.'},
-        {title: 'Key Features', items: ['Real-time data visualization', 'Custom report builder', 'Team collaboration', 'API integrations', 'Automated alerts', 'Data export', 'Role-based access']}
+        {title: 'كيف نعمل؟', content: 'نبدأ بجلسة استشارية لفهم تحديات عملك، ثم نصمم نموذجاً أولياً، ونطوره حتى يطابق رؤيتك تماماً.'},
+        {title: 'ماذا يمكننا بناءه؟', items: ['تطبيقات ويب مخصصة', 'واجهات برمجة تطبيقات (APIs)', 'أنظمة أتمتة سير العمل', 'لوحات معلومات تحليلية متقدمة', 'تكامل مع أنظمة طرف ثالث']}
       ]
     }
   };
@@ -1471,7 +1309,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       });
     }
 
-    html += `<div style="margin-top:32px;padding-top:32px;border-top:1px solid var(--border);text-align:center"><a href="#contact" class="btn btn-primary" onclick="closeModal();return false">Start Your Project <span class="arrow">→</span></a></div>`;
+    html += `<div style="margin-top:32px;padding-top:32px;border-top:1px solid var(--border);text-align:center"><a href="#contact" class="btn btn-primary" onclick="closeModal();return false">اطلب هذا المشروع <span class="arrow">←</span></a></div>`;
 
     modalBody.innerHTML = html;
     modalOverlay.classList.add('active');
@@ -1483,7 +1321,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     document.body.style.overflow = '';
   }
 
-  // Event listeners for modal triggers
   document.querySelectorAll('[data-modal]').forEach(trigger => {
     trigger.addEventListener('click', function() {
       const modalId = this.getAttribute('data-modal');
@@ -1672,7 +1509,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       var r = card.getBoundingClientRect();
       var x = (e.clientX - r.left) / r.width - 0.5;
       var y = (e.clientY - r.top) / r.height - 0.5;
-      card.style.transform = 'perspective(1000px) rotateY('+(x*4)+'deg) rotateX('+(-y*4)+'deg) translateY(-6px)';
+      card.style.transform = 'perspective(1000px) rotateY('+(-x*4)+'deg) rotateX('+(y*4)+'deg) translateY(-6px)';
     });
     card.addEventListener('mouseleave', function(){
       card.style.transform = '';
